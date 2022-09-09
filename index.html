@@ -5,28 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
  <!--BOOTSTRAP-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link href="index.css" rel="stylesheet">
 </head>
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <header>
-  <div class="header">
-    <nav>
-       Collections
-       Men
-       Women
-       About
-      Contact  
+    <nav class="navbar">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <image src="./images/logo.svg" ></image>
-    <div class="cart">
-      <image src="./images/icon-cart.svg"></image>
+    <div id="logo">
+    <image id="logo" src="./images/logo.svg" ></image>
     </div>
-    <div class="user">
-      <image src="./images/image-avatar.png"></image>
-    </div>
-  </div>
-</header>
+ 
+      <image id="cart" src="./images/icon-cart.svg"></image>
+      <image id= "avatar" src="./images/image-avatar.png"></image>
+    </header>
 <body>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -50,6 +61,7 @@
       <span class="sr-only"><image src="./images/icon-next.svg"></image></span>
     </a>
   </div>
+  <div>
   Sneaker Company
 
   Fall Limited Edition Sneakers
