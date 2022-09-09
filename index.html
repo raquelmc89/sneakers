@@ -11,7 +11,9 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <header>
-    <nav class="navbar">
+  <div id="header">
+  <div id="nav">
+    <nav class="navbar navbar-expand-lg">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,40 +33,45 @@
         </ul>
       </div>
     </nav>
-    <div id="logo">
+  </div>
+  <div id="logo">
     <image id="logo" src="./images/logo.svg" ></image>
-    </div>
- 
-      <image id="cart" src="./images/icon-cart.svg"></image>
-      <image id= "avatar" src="./images/image-avatar.png"></image>
-    </header>
+  </div>
+  <div id="cart">
+    <image id="cart" src="./images/icon-cart.svg"></image>
+  </div>
+  <div id="avatar1">
+    <image id= "avatar" src="./images/image-avatar.png"></image>
+  </div>  
+  </div>
+  </header>
 <body>
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="./images/image-product-1-thumbnail.jpg" alt="First slide">
+        <img class="d-block w-100" src="./images/image-product-1.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./images/image-product-2-thumbnail.jpg" alt="Second slide">
+        <img class="d-block w-100" src="./images/image-product-2.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./images/image-product-3-thumbnail.jpg" alt="Third slide">
+        <img class="d-block w-100" src="./images/image-product-3.jpg" alt="Third slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="./images/image-product-4-thumbnail.jpg" alt="Third slide">
+        <img class="d-block w-100" src="./images/image-product-4.jpg" alt="Third slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="sr-only"><image src="./images/icon-previous.svg"></image></span>
+      <span class="sr-only"><image class = "controls" src="./images/icon-previous.svg"></image></span>
     </a>
     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="sr-only"><image src="./images/icon-next.svg"></image></span>
-    </a>
+      <span class="sr-only"><image class= "controls" src="./images/icon-next.svg"></image></span>
+    </a>€
   </div>
   <div>
-  Sneaker Company
+  <p id="snk">SNEAKER COMPANY</p>
 
-  Fall Limited Edition Sneakers
+  <h3>Fall Limited Edition Sneakers</h3>
 
   These low-profile sneakers are your perfect casual wear companion. Featuring a 
   durable rubber outer sole, they’ll withstand everything the weather can offer.
