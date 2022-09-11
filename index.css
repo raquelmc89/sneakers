@@ -1,18 +1,19 @@
 
-
+*{
+    font-family: [Kumbh Sans];
+}
 #header{
     display: flex;
     flex-direction:row;
     align-items: center;
     justify-content:space-evenly;
     padding: 10px;
-  
 
 }
 
 #logo{
     padding-left: 10px;
-
+    
 }
 .navbar{
     list-style-type: none;
@@ -32,7 +33,7 @@ height: 40px;
    padding-right: 5px;
 }
 
-.carousel-inner{
+.carousel slide{
     height: 80vh;
 }
 
@@ -47,18 +48,71 @@ height: 40px;
 #snk{
    color:hsl(26, 100%, 55%);
    padding-top:25px;
-   padding-left: 25px;
    font-weight: 600;
 
 }
 
 
 h3{
-    font-size: 45px;
-    font-weight:600;
-    padding-left: 25px ;
+    font-size: 35px;
+    font-weight:700;
+    width: fit-content;
 
 }
+
+p{
+    font-size: 16px;
+    color:hsl(0, 0%, 75%);
+    font-weight: 400;
+    padding-right: 5px;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+}
+#prize{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+    padding: 10px;
+
+}
+#prize1{
+    height:fit-content;
+    width: fit-content;
+    font-size: 25px;
+    flex-grow: 0;
+    padding-right:15px;
+}
+
+#prize2{
+    margin-top: 10px;
+    text-decoration: line-through;
+    flex-grow: 1;
+    margin-left: 90px;
+   
+  
+}
+
+
+#percent{
+    color:hsl(26, 100%, 55%);
+    border: solid 1px hsl(25, 100%, 94%);
+    width:fit-content;
+    background-color:hsl(25, 100%, 94%) ;
+    border-radius: 5px;
+    padding: 3px;
+    font-weight: 700;
+    margin-top: 10px;
+    flex-grow: 0;
+}
+
+
+
+
 
 @media only screen and (min-width: 1000px){
    #nav{
