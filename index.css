@@ -67,12 +67,13 @@ height: 40px;
 h3{
     font-size: 35px;
     font-weight:700;
-    width: fit-content;
+    width:400px;
+   
 
 }
 
 p{
-    font-size: 16px;
+    font-size: 25px;
     color:hsl(0, 0%, 75%);
     font-weight: 400;
     padding-right: 5px;
@@ -82,6 +83,7 @@ p{
     display: flex;
     flex-direction: column;
     padding-left: 25px;
+    
 }
 #prize{
     display: flex;
@@ -90,11 +92,12 @@ p{
     justify-content:space-evenly;
     padding: 10px;
 
+
 }
 #prize1{
     height:fit-content;
     width: fit-content;
-    font-size: 25px;
+    font-size: 35px;
     flex-grow: 0;
     padding-right:15px;
 }
@@ -103,7 +106,9 @@ p{
     margin-top: 10px;
     text-decoration: line-through;
     flex-grow: 1;
-    margin-left: 90px;
+   padding-left: 180px;
+   
+   
    
   
 }
@@ -123,18 +128,18 @@ p{
 
 /*  BUTTONS  */
 
-
-#addCart{
+.cart{
     display: flex;
-    align-items: center;
-    width:365px;
-    padding: 15px;
+    flex-direction: column;
+    padding-left: 25px;
+
+}
+#addCart{
+    
     background-color:hsl(223, 64%, 98%);
     border-radius: 15px;
     border: none;
-    height: 50px;
-    margin-right: 15px;
-    text-align: center;
+    height: 70px;
     margin-bottom: 20px;
 }
 
@@ -142,16 +147,14 @@ p{
     background-color:hsl(26, 100%, 55%);
     border-radius: 15px;
     border: none;
-    width: 365px;
-    height: 50px;
-    margin-right: 15px;
-    text-align: center;
+    height: 70px;
     color:white;
-    padding-right: 10px;
-
+    padding-left: 15px;
+   
 }
 #cartImg{
     margin-right: 10px;
+    filter: brightness(100);
 }
 
 /*  FOOTER  */
