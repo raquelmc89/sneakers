@@ -106,7 +106,7 @@ p{
     margin-top: 10px;
     text-decoration: line-through;
     flex-grow: 1;
-   padding-left: 180px;
+    padding-left: 180px;
    
    
    
@@ -232,6 +232,7 @@ a{
     padding: 20px;
     border-radius: 30px;
     max-width: 50%;
+    margin-top: 20px;
     
    }
 .carAndPic{
@@ -246,13 +247,31 @@ a{
     flex-direction: column;
     justify-content: center;
     max-width: 50%;
+    margin-left: 10%;
 
+}
+
+#prize{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+}
+
+#prize2{
+   text-align: left; 
   
 }
  .cart {
     display: flex;
     flex-direction: row;
  }
+ #addCart{
+    width:40%;
+    margin-right: 20px;
+ }
+#addCart2{
+    width: 80%;
+}
 
 }
 
