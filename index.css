@@ -1,6 +1,6 @@
 
-*{
-    font-family: [Kumbh Sans];
+html{
+   font-family: "Kumbh Sans";
     /*  HEADER  */
 }
 #header{
@@ -36,8 +36,10 @@ height: 40px;
 
 /*  CAROUSEL  */
 
+
 .carousel slide{
     height: 80vh;
+    width: 100%;
 }
 
 .controls{
@@ -73,7 +75,7 @@ h3{
 }
 
 p{
-    font-size: 25px;
+    font-size: 20px;
     color:hsl(0, 0%, 75%);
     font-weight: 400;
     padding-right: 5px;
@@ -90,7 +92,8 @@ p{
     flex-direction:row;
     align-items:center;
     justify-content:space-evenly;
-    padding: 10px;
+    padding:10px;
+    width: fit-content;
 
 
 }
@@ -106,7 +109,7 @@ p{
     margin-top: 10px;
     text-decoration: line-through;
     flex-grow: 1;
-    padding-left: 180px;
+    padding-left:70px;
    
    
    
