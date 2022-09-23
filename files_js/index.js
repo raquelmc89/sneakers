@@ -23,7 +23,7 @@ prize2.innerText= '$' + prize + '.00';
 // CART
 
 //get the object
-const sneakers = {name:"sneakers", prize:"150", quantity: 1 };
+const sneakers = {name:"sneakers", prize:calcPercent(250.00,50), quantity: 1 };
 document.getElementById("plus").innerHTML = sneakers;
 const sneakersInButtons= sneakers;
 const plus = document.getElementById("plus");
@@ -34,28 +34,33 @@ plus.addEventListener("click", plusButtonClicked);
 function plusButtonClicked(event){
   //get the button 
   const button = event.target
+
   //get the object
   const getItem = sneakersInButtons;
   const getPrize = sneakers.prize;
 
-  //get quantity
- const quantity = document.querySelector(".cart-input");
- quantity.value = "1";
- 
- plusMinusItem
-
- function plusMinusItem (){
-    if (plusButtonClicked == true){
-        quantity.value++;
-        input.innerHTML = quantity;
-    }
- }
-
- 
+getQuantity();
   
+  function getQuantity(){
+ const quantity = document.querySelector(".cart-input");
+ quantity.value = sneakers.quantity;
+ const quantityValue = quantity.value;
+ console.log("🚀 ~ file: index.js ~ line 46 ~ plusButtonClicked ~ quantityValue", quantityValue)
+ const quantityStoraged = getPrize;
+ console.log("🚀 ~ file: index.js ~ line 44 ~ plusButtonClicked ~ quantityStoraged", quantityStoraged)
+  }
 
+  addQuantity()
+
+  function addQuantity(){
+    
+  }
+ 
+ 
+
+ 
+ 
 } 
-  console.log("🚀 ~ file: index.js ~ line 58 ~ plusButtonClicked ~ plusMinusItem", plusMinusItem)
   
   
 
