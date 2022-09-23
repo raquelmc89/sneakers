@@ -33,7 +33,9 @@ height: 40px;
    padding-left: 40px;
    padding-right: 5px;
 }
-
+ h2{
+    display: none;
+ }
 /*  CAROUSEL  */
 
 
