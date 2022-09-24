@@ -49,9 +49,7 @@ function plusButtonClicked(event){
        quantity.value = ++sneakers.quantity;
        const quantityValue = quantity.value;
        const getPrize = (sneakers.prize*quantityValue);
-       console.log("🚀 ~ file: index.js ~ line 50 ~ getQuantity ~ quantityValue", quantityValue)
        const quantityStoraged = getPrize;
-       console.log("🚀 ~ file: index.js ~ line 44 ~ plusButtonClicked ~ quantityStoraged", quantityStoraged)
        const total =  quantityStoraged * quantityValue;
       
     }
