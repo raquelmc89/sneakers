@@ -57,12 +57,12 @@ function plusButtonClicked(event){
  
   //get prize  
   
-    quantity.value = ++sneakers.quantity;
-    let quantityValue = Number(quantity.value);
-    console.log("🚀 ~ file: example.js ~ line 47 ~ plusButtonClicked ~ quantityValue", quantityValue)
-    let getPrize = (sneakers.prize*quantityValue);
-     
     
+  quantity.value = ++sneakers.quantity;
+  let quantityValue = Number(quantity.value);
+  console.log("🚀 ~ file: example.js ~ line 47 ~ plusButtonClicked ~ quantityValue", quantityValue)
+  ;
+   
 
       
 }

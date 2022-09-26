@@ -3,11 +3,9 @@
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
 const addCart2 = document.getElementById('addCart2');
-const input = document.getElementById('input');
-const minus = document.getElementById('minus');
-const plus = document.getElementById("plus");
-
-
+const minusButton = document.getElementById('minusButton');
+const plusButton = document.getElementById("plusButton");
+const quantityInput = document.querySelector('.cart-input');
 
 
 
@@ -26,62 +24,37 @@ prize2.innerText= '$' + prize + '.00';
 // CART
 
 //get the object
-const sneakers = {name:"sneakers", prize:calcPercent(250.00,50), quantity: 0 };
-document.getElementById("plus").innerHTML = sneakers;
-const sneakersInButtons= sneakers;
+const sneakers = {name:"sneakers", prize:calcPercent(250.00,50), amount: 0};
 
+//get quantity and Prize
+quantityInput.value =sneakers.amount;
+let startQuantity = Number(quantityInput.value);
+let getPrize = (sneakers.prize*startQuantity);
 
-plus.addEventListener("click", plusButtonClicked);
+ 
 
-function plusButtonClicked(event){
-
-  //get the button 
-  let button = event.target;
-
-  //get the object
-  const getItem = sneakersInButtons;
-  
-
-  getQuantity();
-  
-    function getQuantity(){
-       // plus button
-       const quantity = document.querySelector(".cart-input");
-       quantity.value = ++sneakers.quantity;
-       let quantityValue = Number(quantity.value);
-       let getPrize = (sneakers.prize*quantityValue);
-       let quantityStoraged = getPrize;
-       let Total = getPrize;
-       
-    
-       
-       /*const minus = document.querySelector(".cart-minusButton");
-       const getLessItem = --quantityValue;
-       console.log("🚀 ~ file: index.js ~ line 58 ~ getQuantity ~ getLessItem", getLessItem)*/
-      
-    };
-
-  
-} 
-
-plusButtonClicked
-
-document.getElementById("minus").innerHTML = sneakersInButtons
-
-
-minus.addEventListener("click", minusButtonClicked);
+minusButton.addEventListener('click', minusButtonClicked);
 
 function minusButtonClicked(event){
-
     const button = event.target;
-    console.log("🚀 ~ file: index.js ~ line 77 ~ minusButtonClicked ~ button", button)
-    if (quantityValue > 1){
-        console.log("🚀 ~ file: index.js ~ line 79 ~ minusButtonClicked ~ quantityValue", quantityValue)
-        
-    }
- 
-    
+    quantityInput.value = --sneakers.amount;
+    const minus = Number(quantityInput.value);
+    console.log("🚀 ~ file: index.js ~ line 41 ~ minusButtonClicked ~ minus", minus)
+     let PrizeDown = (sneakers.prize*minus);
+     console.log("🚀 ~ file: index.js ~ line 43 ~ minusButtonClicked ~ PrizeDown", PrizeDown)
+     
+}
 
 
+plusButton.addEventListener('click', plusButtonClicked);
+
+function plusButtonClicked(event){
+    const plusButtonClicked = event.target;
+    quantityInput.value = ++sneakers.amount;
+    let startQuantity = Number(quantityInput.value);
+    console.log("🚀 ~ file: index.js ~ line 54 ~ plusButtonClicked ~ startQuantity", startQuantity)
+    let getPrize = (sneakers.prize*startQuantity);
+console.log("🚀 ~ file: index.js ~ line 56 ~ plusButtonClicked ~ getPrize ", getPrize )
+minusButtonClicked
 }
 
