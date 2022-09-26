@@ -27,11 +27,6 @@ prize2.innerText= '$' + prize + '.00';
 const sneakers = {name:"sneakers", prize:calcPercent(250.00,50), amount: 0};
 
 //get quantity and Prize
-quantityInput.value =sneakers.amount;
-let startQuantity = Number(quantityInput.value);
-let getPrize = (sneakers.prize*startQuantity);
-
- 
 
 minusButton.addEventListener('click', minusButtonClicked);
 
