@@ -2,7 +2,7 @@
 
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
-const addCart2 = document.getElementById('addCart2');
+const addCart = document.getElementById('addToCart');
 const minusButton = document.getElementById('minusButton');
 const plusButton = document.getElementById("plusButton");
 const quantityInput = document.querySelector('.cart-input');
@@ -23,44 +23,39 @@ prize2.innerText= '$' + prize + '.00';
 
 // CART
 
-//get the object
+//get the object, quantity and prize
 const sneakers = {name:"sneakers", prize:calcPercent(250.00,50), amount: 0};
+quantityInput.value = sneakers.amount
+let quantity = Number(quantityInput.value);
+let prizes = (sneakers.prize*quantity);
 
-//get quantity and Prize
+// minus button 
 
 minusButton.addEventListener('click', minusButtonClicked);
 
 function minusButtonClicked(event){
     const button = event.target;
     quantityInput.value = --sneakers.amount;
-    const minus = Number(quantityInput.value);
-    console.log("🚀 ~ file: index.js ~ line 41 ~ minusButtonClicked ~ minus", minus)
-    let PrizeDown = (sneakers.prize*minus);
-    console.log("🚀 ~ file: index.js ~ line 43 ~ minusButtonClicked ~ PrizeDown", PrizeDown)
-     
+    let quantityDown = quantityInput.value
+    prizeDown = (sneakers.prize*quantityDown);
+
+    if(quantityDown < 0){
+        quantityInput.value = ++sneakers.amount;
+    }
+
 };
 
+// plus button 
 
 plusButton.addEventListener('click', plusButtonClicked);
 
 function plusButtonClicked(event){
     const plusButtonClicked = event.target;
     quantityInput.value = ++sneakers.amount;
-    let startQuantity = Number(quantityInput.value);
-    console.log("🚀 ~ file: index.js ~ line 54 ~ plusButtonClicked ~ startQuantity", startQuantity)
-    let getPrize = (sneakers.prize*startQuantity);
-    console.log("🚀 ~ file: index.js ~ line 56 ~ plusButtonClicked ~ getPrize ", getPrize )
-    minusButtonClicked
-};
+    const quantityUp = quantityInput.value;
+    getPrize = (sneakers.prize*quantityUp);
 
-$(document).ready(function(){
     
-   $(".cart-2").click(function addToCardClicked(){
-       const cartIcon = document.getElementById("cart");
-       console.log("🚀 ~ file: index.js ~ line 60 ~ addToCardClicked ~ cartIcon", cartIcon)
-       
-   });
+minusButtonClicked
 
-});
-
-
+};
