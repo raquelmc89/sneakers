@@ -35,10 +35,10 @@ function minusButtonClicked(event){
     quantityInput.value = --sneakers.amount;
     const minus = Number(quantityInput.value);
     console.log("🚀 ~ file: index.js ~ line 41 ~ minusButtonClicked ~ minus", minus)
-     let PrizeDown = (sneakers.prize*minus);
-     console.log("🚀 ~ file: index.js ~ line 43 ~ minusButtonClicked ~ PrizeDown", PrizeDown)
+    let PrizeDown = (sneakers.prize*minus);
+    console.log("🚀 ~ file: index.js ~ line 43 ~ minusButtonClicked ~ PrizeDown", PrizeDown)
      
-}
+};
 
 
 plusButton.addEventListener('click', plusButtonClicked);
@@ -49,7 +49,18 @@ function plusButtonClicked(event){
     let startQuantity = Number(quantityInput.value);
     console.log("🚀 ~ file: index.js ~ line 54 ~ plusButtonClicked ~ startQuantity", startQuantity)
     let getPrize = (sneakers.prize*startQuantity);
-console.log("🚀 ~ file: index.js ~ line 56 ~ plusButtonClicked ~ getPrize ", getPrize )
-minusButtonClicked
-}
+    console.log("🚀 ~ file: index.js ~ line 56 ~ plusButtonClicked ~ getPrize ", getPrize )
+    minusButtonClicked
+};
+
+$(document).ready(function(){
+    
+   $(".cart-2").click(function addToCardClicked(){
+       const cartIcon = document.getElementById("cart");
+       console.log("🚀 ~ file: index.js ~ line 60 ~ addToCardClicked ~ cartIcon", cartIcon)
+       
+   });
+
+});
+
 

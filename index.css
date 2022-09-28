@@ -103,7 +103,7 @@ p{
 #prize1{
     height:fit-content;
     width: fit-content;
-    font-size: 35px;
+    font-size: 25px;
     flex-grow: 0;
     padding-right:15px;
 }
@@ -112,10 +112,7 @@ p{
     margin-top: 10px;
     text-decoration: line-through;
     flex-grow: 1;
-    padding-left:70px;
-   
-   
-   
+    padding-left:65px;
   
 }
 
@@ -138,25 +135,61 @@ p{
     display: flex;
     flex-direction: column;
     width: 375px;
-    
 
 }
-#addCart{
+
+.cart-input{
     
+    background-color:hsl(223, 64%, 98%);
+    border:none;
+    width:100%;
+    text-align: center;
+   
+}
+.cart-plusButton{
+    color:hsl(26, 100%, 55%);
+    position:relative;
+    border:none;
+    background-color:hsl(223, 64%, 98%) ;
+    font-size: 20px;
+    font-weight: 600;
+    right:10px;
+
+}
+.cart-minusButton {
+    color:hsl(26, 100%, 55%);
+    position:relative;
+    border:none;
+    background-color:hsl(223, 64%, 98%) ;
+    font-size: 20px;
+    font-weight: 600;
+    left: 10px;
+  
+}
+.cart-1{
+    display:flex;
     background-color:hsl(223, 64%, 98%);
     border-radius: 15px;
     border: none;
     height: 70px;
     margin-bottom: 20px;
+    margin-right: 40px;
+   
 }
-
 #addCart2{
+ 
     background-color:hsl(26, 100%, 55%);
     border-radius: 15px;
     border: none;
     height: 70px;
     color:white;
-    padding-left: 15px;
+    width:90%;
+   
+    
+
+
+   
+    
    
 }
 #cartImg{
