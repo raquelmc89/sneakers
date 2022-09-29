@@ -6,6 +6,7 @@ const addCart = document.getElementById('addToCart');
 const minusButton = document.getElementById('minusButton');
 const plusButton = document.getElementById("plusButton");
 const quantityInput = document.querySelector('.cart-input');
+const cartIcon = document.getElementById('cartIcon');
 
 
 
@@ -59,3 +60,24 @@ function plusButtonClicked(event){
 minusButtonClicked
 
 };
+
+const shoppingCartEmpty = document.createElement('div');
+const shoppingCartContent = ` <div class="cartEmpty">
+<div id="cartEmptyTitle">
+  <h4>Cart</h4>
+</div>
+<div id="cartEmptyContent">
+  <h4>Your cart is empty</h4>
+</div>
+</div>`;
+shoppingCartEmpty.innerHTML = shoppingCartContent;
+let shoppingCartEmptyShow = shoppingCartEmpty.innerHTML;
+
+cartIcon.addEventListener("click", cartIconClicked) 
+
+ function cartIconClicked(event){
+    buttonCart = event.target;
+    alert(shoppingCartEmptyShow);
+ }
+   
+
