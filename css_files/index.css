@@ -36,12 +36,43 @@ height: 40px;
  h2{
     display: none;
  }
+
+ #la{
+    position:relative;
+ }
+ /*    CART EMPTY*/
+
+ .cartEmpty{
+    display:none;
+    border-radius:30px;
+    width: 50%;
+    height:60vh;
+
+  
+  }
+  #cartTitle{
+    border-bottom: solid black;
+    margin-left:10px;
+    margin-right: 10px;
+    color:red;
+  }
+
+  #cartCont{
+    margin-top: 50%;
+  }
+  
+  
+
 /*  CAROUSEL  */
 
-
-.carousel slide{
+.carousel-item{
+    position: relative;
+}
+.carousel-slide{
     height: 80vh;
     width: 100%;
+    position:absolute;
+  
 }
 
 .controls{
@@ -184,12 +215,6 @@ p{
     height: 70px;
     color:white;
     width:90%;
-   
-    
-
-
-   
-    
    
 }
 #cartImg{
@@ -340,4 +365,3 @@ p{
 }
 }
 
-   

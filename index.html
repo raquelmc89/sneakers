@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans"/>
+  <link rel="stylesheet" href="https://fonts.google.com/speci/Kumbh+Sans"/>
  <!--JQUERY-->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
   <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link href="./css_files/index.css" rel="stylesheet">
-  <link href="./css_files/cart.css" rel="stylesheet">
+  <link href="./" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <header>
@@ -41,28 +42,31 @@
     <image id="logo" src="./images/logo.svg" ></image>
   </div>
   <div id="cartIcon">
-    <image id="cart" src="./images/icon-cart.svg"></image>
-    <div class="cartEmpty">
-      <div id="cartEmptyTitle">
-        <h4>Cart</h4>
-      </div>
-      <div id="cartEmptyContent">
-        <h4>Your cart is empty</h4>
-      </div>
-    </div>
+   <image id="cart" src="./images/icon-cart.svg"></image>
   </div>
   <div id="avatar1">
     <image id= "avatar" src="./images/image-avatar.png"></image>
   </div>  
   </div>
-  </header>
+</header>
 <body>
   <div class="container">
-    <div class="carAndPic">
-      <div id="sneakers">
-        <h2>sneakers</h2>
-      </div>
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+     <div class="carAndPic">
+       <div id="sneakers">
+         <h2>sneakers</h2>
+       </div>
+       <div id="la">
+         <!--CART CLICKED-->
+         <div class= "cartEmpty">
+          <div id="cartTitle">
+            <h4>Cart</h4>
+          </div>
+          <div id="cartCont">
+            <h4> Your cart is empty</h4>
+          </div>
+        </div>
+         <!--END FOR CART-->
+       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img class="d-block w-100" src="./images/image-product-1.jpg" alt="First slide">
@@ -83,7 +87,8 @@
           <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="sr-only"><image class= "controls" src="./images/icon-next.svg"></image></span>
           </a>
-         </div>
+        </div>
+       </div>
       <div class="photos">
         <img class="imgdes" src="./images/image-product-1-thumbnail.jpg">
         <img class="imgdes" src="./images/image-product-2-thumbnail.jpg">
@@ -91,6 +96,7 @@
         <img class="imgdes" src="./images/image-product-4-thumbnail.jpg">
       </div>
     </div>
+    
     <div id="description" class = "item">
        <p id="snk">SNEAKER COMPANY</p>
        <h3 class="item-title">Fall Limited Edition Sneakers</h3>
@@ -113,7 +119,7 @@
            <button id="addToCart"><image id="cartImg" src="./images/icon-cart.svg"></image>Add to cart</button>
          </div>
        </div>
-   </div>
+  </div>
 <!--SCRIPTS-->
 <script src="./files_js/index.js"></script>
 <!--<script src="./files_js/example.js"></script>-->

@@ -6,7 +6,10 @@ const input = document.getElementById('input');
 const minusButton = document.getElementById('minusButton');
 const plusButton = document.getElementById("plusButton");
 const quantityInput = document.querySelector(".cart-input");
-       
+const cartIcon = document.querySelector('#cartIcon');
+
+
+      
 
 
 
@@ -60,8 +63,17 @@ function plusButtonClicked(event){
     getPrize = (sneakers.prize*quantityUp);
 
     
-minusButtonClicked
+   minusButtonClicked
 
-    console.log("🚀 ~ file: example.js ~ line 65 ~ plusButtonClicked ~ getPrize;", getPrize)
-    console.log("🚀 ~ file: example.js ~ line 65 ~ plusButtonClicked ~  quantityUp",  quantityUp)
 };
+
+ /*
+
+cartIcon.addEventListener("click", cartIconClicked)
+
+function cartIconClicked(event){
+buttonCart = event.target;
+ const cart1 = document.querySelector("#cartEmpty");
+ cartIcon.appendChild(cart1)
+     }
+*/
