@@ -42,7 +42,7 @@ height: 40px;
  }
  /*    CART EMPTY*/
 
- .cartEmpty{
+ .cart-Empty{
     display:none;
     border-radius:30px;
     width: 50%;
@@ -50,14 +50,14 @@ height: 40px;
 
   
   }
-  #cartTitle{
+  .cart-Title{
     border-bottom: solid black;
     margin-left:10px;
     margin-right: 10px;
     color:red;
   }
 
-  #cartCont{
+  .cart-Cont{
     margin-top: 50%;
   }
   
@@ -207,7 +207,7 @@ p{
     margin-right: 40px;
    
 }
-#addCart2{
+#addToCart{
  
     background-color:hsl(26, 100%, 55%);
     border-radius: 15px;
