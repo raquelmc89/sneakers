@@ -6,6 +6,7 @@ const addCart = document.getElementById('addToCart');
 const minusButton = document.getElementById('minusButton');
 const plusButton = document.getElementById("plusButton");
 const quantityInput = document.querySelector('.cart-input');
+const addToCart = document.querySelector('#addToCart');
 const cartIcon = document.getElementById('cartIcon');
 const cartEmpty = document.querySelector('.cart-Empty');
 const cartFull = document.querySelector('.cart-full');
@@ -33,11 +34,11 @@ const sneakers = {
   name:"Autum Limited Edition...",
   prize:calcPercent(250.00,50),
   amount: 0,
-  image:"image-product1-thumbnail.jpg"};
+  image:"image-product1-thumbnail.jpg"
+};
 
-quantityInput.value = sneakers.amount
-let quantity = Number(quantityInput.value);
-let prizes = (sneakers.prize*quantity);
+quantityInput.value =Number(sneakers.amount)
+let prizes = ((sneakers.prize)*(quantityInput.value));
 
 // minus button 
 
@@ -46,13 +47,9 @@ minusButton.addEventListener('click', minusButtonClicked);
 function minusButtonClicked(event){
     const button = event.target;
     quantityInput.value = --sneakers.amount;
-    let quantityDown = quantityInput.value
-    prizeDown = (sneakers.prize*quantityDown);
-
-    if(quantityDown < 0){
-        quantityInput.value = ++sneakers.amount;
-    }
-
+   const  prizeDown = ((sneakers.prize)*(quantityInput.value));
+   
+    quantityInput.value < 0 ? (quantityInput.value = ++sneakers.amount) : null
 };
 
 // plus button 
@@ -62,38 +59,24 @@ plusButton.addEventListener('click', plusButtonClicked);
 function plusButtonClicked(event){
     const plusButtonClicked = event.target;
     quantityInput.value = ++sneakers.amount;
-    console.log("🚀 ~ file: index.js ~ line 65 ~ plusButtonClicked ~ quantityInput.value", quantityInput.value)
-    const quantityUp = quantityInput.value;
-    getPrize = (sneakers.prize*quantityUp);
+    const prizeUp = ((sneakers.prize)*(quantityInput.value));
 
-    
+   
 minusButtonClicked
 
 };
 
-/*
-  const shoppingCartEmpty = document.createElement('div');
-   const shoppingCartContent = `<div class= "cartEmpty">
-   <div id="cartTitle">
-     <h4>Cart</h4>
-   </div>
-   <div id="cartCont">
-     <h4> Your cart is empty</h4>
-   </div>
- </div>`
-   shoppingCartEmpty.innerHTML = shoppingCartContent;
-   cartEmpty.append(shoppingCartEmpty);
-   let shoppingCartEmptyShow = shoppingCartEmpty.innerText;
 
 
-   cartIcon.addEventListener("click", cartIconClicked)
-   
-     function cartIconClicked(event){
-    buttonCart = event.target;
-     cartIcon.innerHTML = shoppingCartEmptyShow;
-    
+addToCart.addEventListener('click', addToCartClicked);
 
-   };*/
+function addToCartClicked(event){
+ const buttonClicked = event.target;
+console.log(quantityInput.value)
+
+}
+addToCartClicked;
+
 /*
     cartIcon.addEventListener("click", cartIconClicked)
    

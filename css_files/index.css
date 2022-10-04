@@ -1,6 +1,7 @@
 
 html{
    font-family: "Kumbh Sans";
+
     /*  HEADER  */
 }
 #header{
@@ -33,6 +34,15 @@ height: 40px;
    padding-left: 40px;
    padding-right: 5px;
 }
+.cartIconFull{
+    position: relative;
+    }
+.cartIconFull span{
+    position: absolute;
+    top: -2px;
+    right: -2px; 
+    }
+    
  h2{
     display: none;
  }
