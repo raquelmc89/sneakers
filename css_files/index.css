@@ -34,22 +34,22 @@ height: 40px;
    padding-left: 40px;
    padding-right: 5px;
 }
-.cartIconFull{
-    position: relative;
-    }
-.cartIconFull span{
-    position: absolute;
-    top: -2px;
-    right: -2px; 
+
+#cartIcon span{
+   
+    background-color: hsl(26, 100%, 55%);
+    margin-left:-15px; 
+    border-radius: 40%;
+    padding:3px;
+    color:white;
+    margin-bottom: 10px;
+    font-size: 9px;
     }
     
  h2{
     display: none;
  }
 
- #la{
-    position:relative;
- }
  /*    CART EMPTY*/
 
  .cart-Empty{
@@ -65,6 +65,7 @@ height: 40px;
     margin-left:10px;
     margin-right: 10px;
     color:red;
+    display:none;
   }
 
   .cart-Cont{
