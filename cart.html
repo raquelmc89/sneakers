@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/speci/Kumbh+Sans"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!--JQUERY-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link href="./css_files/index.css" rel="stylesheet">
+  <link href="./css_files/cart.css" rel="stylesheet">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<header>
+  <div id="header">
+  <div id="nav">
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Collections</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Men</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Women</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="logo">
+    <image id="logo" src="./images/logo.svg" ></image>
+  </div>
+  <div id="cartIcon" class="cartIconFull">
+   <image id="cart" src="./images/icon-cart.svg"> <span id="cartIconNumber">0</span></image>
+  </div>
+  <div id="avatar1">
+    <image id= "avatar" src="./images/image-avatar.png"></image>
+  </div>  
+  </div>
+</header>
+<body>
+<div class="row" data-id=${sneakers.name}>
+    <div class="cart col">
+       <div class="col">
+         <div class="cart-img">
+              <img id="imgCart" src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
+         </div>
+       </div>
+       <div class="cart-item row">
+         <div class = "cart-name row">
+              <h6>Autumn Limited Edition...</h6>
+         </div>
+         <div class="row numbers">
+           <div class="cart-prize col-2">
+              <p>$150.00</p>
+           </div>
+           <div class="cart-amount col-2">
+            <p>x3</p>
+           </div>
+           <div class="cart-total col-2">
+            <p>375<p>
+           </div>
+           <div class="cart-delete col-4">
+           <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
+           </div>
+        </div>
+    </div>
+</div>
+  <button id="checkout">Checkout</button>
+  </div>
+</body>
+</html>
+      

@@ -72,7 +72,7 @@ addToCart.addEventListener('click', addToCartClicked);
 
 function addToCartClicked(event){
     const buttonClicked = event.target;
-    cartIconNumber.innerText = quantityInput.value;
+   cartIconNumber.innerText = quantityInput.value;   
 
 }
 addToCartClicked;
@@ -98,11 +98,15 @@ function cartIconClicked(event){
      }
      
     }
-    
+    cartIconClicked
   //CART FULL DIV
 
+     cartIconNumber.innerText = quantityInput.value;
+     
     const shoppingCartRow = document.createElement('div');
     const shoppingCartContent =
+     
+     
      `<div class="row shoppingCartItem" data-id=${sneakers.name}>
     <div class="col-6">
         <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
@@ -112,10 +116,10 @@ function cartIconClicked(event){
     </div>
     <div class="col-2">
         <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <p class="item-price mb-0 shoppingCartItemPrice">${sneakers.prize}</p>
+            <p class="item-price mb-0 shoppingCartItemPrice">${sneakers.prize}</p><p>x</p>
         </div>
-        <div class="shopping-cart-amount d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <p class="item-amount mb-0 shoppingCartItemAmount">${sneakers.amount}</p>
+        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+            <p class="item-price mb-0 shoppingCartItemAmount">${cartIconNumber.innerText}</p>
         </div>
     </div>
     <div class="col-4">
@@ -126,7 +130,7 @@ function cartIconClicked(event){
          <div> <button id="addToCart">Checkout</button>
     </div>`;
     
-   
+    console.log("🚀 ~ file: index.js ~ line 108 ~ shoppingCartContent", shoppingCartContent)
     
 
     
