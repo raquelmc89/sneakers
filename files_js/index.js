@@ -40,6 +40,7 @@ const sneakers = {
 quantityInput.value =Number(sneakers.amount)
 let prizes = ((sneakers.prize)*(quantityInput.value));
 
+
 // minus button 
 
 minusButton.addEventListener('click', minusButtonClicked);
@@ -47,9 +48,12 @@ minusButton.addEventListener('click', minusButtonClicked);
 function minusButtonClicked(event){
     const button = event.target;
     quantityInput.value = --sneakers.amount;
-   const  prizeDown = ((sneakers.prize)*(quantityInput.value));
-   
+    const quantity =  quantityInput.value;
+    const storageQuantityDown = window.localStorage.setItem('quantity',quantity);
+    const  prizeDown = ((sneakers.prize)*(quantityInput.value));
     quantityInput.value < 0 ? (quantityInput.value = ++sneakers.amount) : null
+    const storagePrizeDown = window.localStorage.setItem('prize',prizeDown);
+    
 };
 
 // plus button 
@@ -59,24 +63,26 @@ plusButton.addEventListener('click', plusButtonClicked);
 function plusButtonClicked(event){
     const plusButtonClicked = event.target;
     quantityInput.value = ++sneakers.amount;
+    const quantityUp = quantityInput.value;
+    const storageQuantityUp = window.localStorage.setItem('quantity',quantityUp);
     const prizeUp = ((sneakers.prize)*(quantityInput.value));
-
-   
+    const storagePrizeUp = window.localStorage.setItem('prize',prizeUp)
+  
 minusButtonClicked
 
-};
-
-
+}
 
 addToCart.addEventListener('click', addToCartClicked);
 
 function addToCartClicked(event){
     const buttonClicked = event.target;
-   cartIconNumber.innerText = quantityInput.value;   
-
+   cartIconNumber.innerText = quantityInput.value;  
+   const itemAmount =  Number(cartIconNumber.innerText);
+   itemAmount
+   
 }
+  
 addToCartClicked;
-
 
 cartIcon.addEventListener("click", cartIconClicked)
 
@@ -92,47 +98,19 @@ function cartIconClicked(event){
             });
             
             });
-     } else{
-        shoppingCartRow.innerHTML = shoppingCartContent;
-        cartFull.append(shoppingCartRow);
-     }
-     
-    }
-    cartIconClicked
-  //CART FULL DIV
+     } else {
+       /* $(document).ready(function(){
 
-     cartIconNumber.innerText = quantityInput.value;
-     
+            $("#cartIcon").click(function(){
+              $(".cart-full").toggle();
+            });
+            
+            });*/
+
+            const quantityFromStorage= localStorage.getItem('quantity');
+    const prizeFromStorage = localStorage.getItem('prize');
     const shoppingCartRow = document.createElement('div');
-   /* const shoppingCartContent =
-     
-     
-     `<div class="row shoppingCartItem" data-id=${sneakers.name}>
-    <div class="col-6">
-        <div class="shopping-cart-item d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <img src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
-            <h6 class="shopping-cart-item-title shoppingCartItemTitle text-truncate ml-3 mb-0">${sneakers.name}</h6>
-        </div>
-    </div>
-    <div class="col-2">
-        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <p class="item-price mb-0 shoppingCartItemPrice">${sneakers.prize}</p><p>x</p>
-        </div>
-        <div class="shopping-cart-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
-            <p class="item-price mb-0 shoppingCartItemAmount">${cartIconNumber.innerText}</p>
-        </div>
-    </div>
-    <div class="col-4">
-        <div>
-            <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>
-        </div>
-    </div>
-         <div> <button id="addToCart">Checkout</button>
-    </div>`;
-    
-    console.log("🚀 ~ file: index.js ~ line 108 ~ shoppingCartContent", shoppingCartContent)
-    */
-   const shoppingCartContent = `<div class="row" data-id=${sneakers.name}>
+    const shoppingCartContent = `<div class="row" data-id=${sneakers.name}>
    <div class="cart col">
       <div class="col">
         <div class="cart-img">
@@ -145,13 +123,13 @@ function cartIconClicked(event){
         </div>
         <div class="row numbers">
           <div class="cart-prize col-2">
-             <p>${sneakers.prize}</p>
-          </div>
+             <p>$${sneakers.prize}</p>
+          </div> 
           <div class="cart-amount col-2">
-           <p>${cartIconNumber.innerText}</p>
+            <p>x${quantityFromStorage}</p>
           </div>
           <div class="cart-total col-2">
-           <p>${sneakers.prize}<p>
+           <p>${prizeFromStorage}<p>
           </div>
           <div class="cart-delete col-4">
           <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
@@ -160,12 +138,13 @@ function cartIconClicked(event){
    </div>
 </div>
  <button id="checkout">Checkout</button>
- </div>
-   `
+ </div>`
+   
+     shoppingCartRow.innerHTML = shoppingCartContent;
+     cartFull.append(shoppingCartRow);
+  
+} 
 
+}
+     
     
-    
-
-
-
-
