@@ -104,7 +104,7 @@ function cartIconClicked(event){
      cartIconNumber.innerText = quantityInput.value;
      
     const shoppingCartRow = document.createElement('div');
-    const shoppingCartContent =
+   /* const shoppingCartContent =
      
      
      `<div class="row shoppingCartItem" data-id=${sneakers.name}>
@@ -131,7 +131,37 @@ function cartIconClicked(event){
     </div>`;
     
     console.log("🚀 ~ file: index.js ~ line 108 ~ shoppingCartContent", shoppingCartContent)
-    
+    */
+   const shoppingCartContent = `<div class="row" data-id=${sneakers.name}>
+   <div class="cart col">
+      <div class="col">
+        <div class="cart-img">
+             <img id="imgCart" src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
+        </div>
+      </div>
+      <div class="cart-item row">
+        <div class = "cart-name row">
+             <h6>Autumn Limited Edition...</h6>
+        </div>
+        <div class="row numbers">
+          <div class="cart-prize col-2">
+             <p>${sneakers.prize}</p>
+          </div>
+          <div class="cart-amount col-2">
+           <p>${cartIconNumber.innerText}</p>
+          </div>
+          <div class="cart-total col-2">
+           <p>${sneakers.prize}<p>
+          </div>
+          <div class="cart-delete col-4">
+          <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
+          </div>
+       </div>
+   </div>
+</div>
+ <button id="checkout">Checkout</button>
+ </div>
+   `
 
     
     
