@@ -5,7 +5,9 @@
     margin-left:20px;
 }
 
-
+.cartFull{
+    display: none;
+}
 #imgCart{
     height: 80px;
     margin-left: 20px;
@@ -20,13 +22,13 @@
     justify-items: flex-start;
 }
 .cart-amount{
-   margin-left: 10px;
+   margin-left:40px;
 
 }
 .cart-total{
  color:black;
  width: fit-content;
- margin-left: -40px;
+ margin-left: 40px;
  
 }
 .delete{

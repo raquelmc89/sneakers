@@ -9,8 +9,12 @@ const quantityInput = document.querySelector('.cart-input');
 const addToCart = document.querySelector('#addToCart');
 const cartIcon = document.getElementById('cartIcon');
 const cartEmpty = document.querySelector('.cart-Empty');
-const cartFull = document.querySelector('.cart-full');
+const cartFull = document.querySelector('.cartFull');
 const cartIconNumber = document.getElementById("cartIconNumber");
+const sprize = document.getElementById("sneakers.prize");
+const squantity = document.getElementById("quantityFromStorage");
+const totalPrize = document.getElementById("prizeFromStorage");
+ 
 
 
 
@@ -49,10 +53,10 @@ function minusButtonClicked(event){
     const button = event.target;
     quantityInput.value = --sneakers.amount;
     const quantity =  quantityInput.value;
-    const storageQuantityDown = window.localStorage.setItem('quantity',quantity);
+    let storageQuantityDown = window.localStorage.setItem('quantity',quantity);
     const  prizeDown = ((sneakers.prize)*(quantityInput.value));
     quantityInput.value < 0 ? (quantityInput.value = ++sneakers.amount) : null
-    const storagePrizeDown = window.localStorage.setItem('prize',prizeDown);
+    let storagePrizeDown = window.localStorage.setItem('prize',prizeDown);
     
 };
 
@@ -64,9 +68,9 @@ function plusButtonClicked(event){
     const plusButtonClicked = event.target;
     quantityInput.value = ++sneakers.amount;
     const quantityUp = quantityInput.value;
-    const storageQuantityUp = window.localStorage.setItem('quantity',quantityUp);
+    let storageQuantityUp = window.localStorage.setItem('quantity',quantityInput.value);
     const prizeUp = ((sneakers.prize)*(quantityInput.value));
-    const storagePrizeUp = window.localStorage.setItem('prize',prizeUp)
+    let storagePrizeUp = window.localStorage.setItem('prize',prizeUp)
   
 minusButtonClicked
 
@@ -78,73 +82,71 @@ function addToCartClicked(event){
     const buttonClicked = event.target;
    cartIconNumber.innerText = quantityInput.value;  
    const itemAmount =  Number(cartIconNumber.innerText);
-   itemAmount
    
 }
-  
-addToCartClicked;
 
+
+
+/*
+let shoppingCartRow = document.createElement('div'); 
+const shoppingCartContent = `<div class="row cartFull">
+<div class="cart col">
+<div class="col">
+<div class="cart-img">
+<img id="imgCart" src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
+</div>
+</div>
+<div class="cart-item row">
+<div class = "cart-name row">
+<h6>Autumn Limited Edition...</h6>
+</div>
+<div class="row numbers">
+<div class="cart-prize col-2">
+<p id="sneakers.prize>$${sneakers.prize}</p>
+</div> 
+<div class="cart-amount col-2">
+<p id="quantityFromStorage">x${quantityFromStorage}</p>
+</div>
+<div class="cart-total col-2">
+<p id="prizeFromStorage>${prizeFromStorage}<p>
+</div>
+<div class="cart-delete col-4">
+<button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
+</div>
+</div>
+</div>
+</div>
+<button id="checkout">Checkout</button>
+</div>`
+
+shoppingCartRow.innerHTML = shoppingCartContent;
+ cartFull.append(shoppingCartRow);
+ shoppingCartRow.style.display = "none"*/
+
+
+
+    
 cartIcon.addEventListener("click", cartIconClicked)
 
 function cartIconClicked(event){
-    const buttonClicked = event.target
+    const buttonClicked = event.target;
 
-    if(cartIconNumber.innerText == 0)
-    {
-        $(document).ready(function(){
-
-            $("#cartIcon").click(function(){
-              $(".cart-Empty").toggle();
-            });
-            
-            });
-     } else {
-       /* $(document).ready(function(){
-
-            $("#cartIcon").click(function(){
-              $(".cart-full").toggle();
-            });
-            
-            });*/
-
-            const quantityFromStorage= localStorage.getItem('quantity');
-    const prizeFromStorage = localStorage.getItem('prize');
-    const shoppingCartRow = document.createElement('div');
-    const shoppingCartContent = `<div class="row" data-id=${sneakers.name}>
-   <div class="cart col">
-      <div class="col">
-        <div class="cart-img">
-             <img id="imgCart" src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
-        </div>
-      </div>
-      <div class="cart-item row">
-        <div class = "cart-name row">
-             <h6>Autumn Limited Edition...</h6>
-        </div>
-        <div class="row numbers">
-          <div class="cart-prize col-2">
-             <p>$${sneakers.prize}</p>
-          </div> 
-          <div class="cart-amount col-2">
-            <p>x${quantityFromStorage}</p>
-          </div>
-          <div class="cart-total col-2">
-           <p>${prizeFromStorage}<p>
-          </div>
-          <div class="cart-delete col-4">
-          <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
-          </div>
-       </div>
-   </div>
-</div>
- <button id="checkout">Checkout</button>
- </div>`
-   
-     shoppingCartRow.innerHTML = shoppingCartContent;
-     cartFull.append(shoppingCartRow);
   
-} 
+quantityFromStorage= localStorage.getItem('quantity');
+prizeFromStorage = localStorage.getItem('prize');
+   
+totalPrize.innerText = prizeFromStorage;
+squantity.innerText= "X" + quantityFromStorage;
+sprize.innerText ="$" + sneakers.prize + ".00";
 
-}
-     
+    if (cartIconNumber.innerText == 0){
+        cartEmpty.classList.toggle("cart-Empty");
+      
+    } else {
+        cartFull.classList.toggle("cartFull");
     
+    }
+        
+   
+} 
+      
