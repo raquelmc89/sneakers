@@ -14,6 +14,8 @@ const cartIconNumber = document.getElementById("cartIconNumber");
 const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
+const buttonDelete = document.querySelector('.delete');
+
  
 
 
@@ -132,21 +134,29 @@ function cartIconClicked(event){
     const buttonClicked = event.target;
 
   
-quantityFromStorage= localStorage.getItem('quantity');
-prizeFromStorage = localStorage.getItem('prize');
+    quantityFromStorage= localStorage.getItem('quantity');
+    prizeFromStorage = localStorage.getItem('prize');
    
-totalPrize.innerText = prizeFromStorage;
-squantity.innerText= "X" + quantityFromStorage;
-sprize.innerText ="$" + sneakers.prize + ".00";
+    totalPrize.innerText = prizeFromStorage;
+    squantity.innerText= "X" + quantityFromStorage;
+    sprize.innerText ="$" + sneakers.prize + ".00";
 
-    if (cartIconNumber.innerText == 0){
-        cartEmpty.classList.toggle("cart-Empty");
+      if (cartIconNumber.innerText == 0){
+          cartEmpty.classList.toggle("cart-Empty");
       
-    } else {
-        cartFull.classList.toggle("cartFull");
-    
+        } else {
+           cartFull.classList.toggle("cartFull");
     }
         
-   
-} 
+} ;
+
+buttonDelete.addEventListener('click', removeShopping);
+
+function removeShopping(event){
+    const deleteButton = event.target;
+    deleteButton.closest('.cartContent').remove();
+    cartIconNumber.innerText = 0;
+    cartIconClicked()
+ 
+}
       
