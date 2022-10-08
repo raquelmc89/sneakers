@@ -81,7 +81,7 @@ minusButtonClicked
 addToCart.addEventListener('click', addToCartClicked);
 
 function addToCartClicked(event){
-    const buttonClicked = event.target;
+   const buttonClicked = event.target;
    cartIconNumber.innerText = quantityInput.value;  
    const itemAmount =  Number(cartIconNumber.innerText);
    
@@ -141,22 +141,24 @@ function cartIconClicked(event){
     squantity.innerText= "X" + quantityFromStorage;
     sprize.innerText ="$" + sneakers.prize + ".00";
 
-      if (cartIconNumber.innerText == 0){
-          cartEmpty.classList.toggle("cart-Empty");
-      
-        } else {
-           cartFull.classList.toggle("cartFull");
-    }
+    cartIconNumber.innerText == 0 ?
+     cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
+    
+    cartFull
+    .querySelector('.delete')
+    .addEventListener('click', removeShoppingItem);
+    
+        function removeShoppingItem(event){
+        const buttonDelete = event.target;
+        cartIconNumber.innerText > 0 ? 
+        cartFull.classList.toggle("cartFull") : 
+        null;
+        cartIconNumber.innerHTML = 0;
         
+      }
+      
 } ;
 
-buttonDelete.addEventListener('click', removeShopping);
+    
 
-function removeShopping(event){
-    const deleteButton = event.target;
-    deleteButton.closest('.cartContent').remove();
-    cartIconNumber.innerText = 0;
-    cartIconClicked()
- 
-}
       
