@@ -1,5 +1,9 @@
 
 
+
+const navIcon = document.querySelector('.icon-menu');
+const navMenu = document.querySelector('.nav-menu');
+console.log("🚀 ~ file: index.js ~ line 6 ~ navMenu", navMenu)
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
 const addCart = document.getElementById('addToCart');
@@ -16,8 +20,17 @@ const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
 
- 
+ //MENU
 
+navIcon.addEventListener('click', showMenu);
+
+function showMenu(event){
+     const showMenuButton = event.target;
+     navMenu.style.display = navMenu.style.display == "none" ?
+     "block" : "none";
+   
+   
+}   
 
 
 //PRIZE
@@ -133,6 +146,8 @@ cartIcon.addEventListener("click", cartIconClicked)
 function cartIconClicked(event){
     const buttonClicked = event.target;
 
+    cartIconNumber.innerText == 0 ?
+    cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
   
     quantityFromStorage= localStorage.getItem('quantity');
     prizeFromStorage = localStorage.getItem('prize');
@@ -141,8 +156,7 @@ function cartIconClicked(event){
     squantity.innerText= "X" + quantityFromStorage;
     sprize.innerText ="$" + sneakers.prize + ".00";
 
-    cartIconNumber.innerText == 0 ?
-     cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
+   
     
     cartFull
     .querySelector('.delete')
