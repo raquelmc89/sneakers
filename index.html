@@ -13,14 +13,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link href="./css_files/index.css" rel="stylesheet">
   <link href="./css_files/cart.css" rel="stylesheet">
+  <link href="./css_files/laptop.css" rel="stylesheet">
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <header>
-    <div id="navLogo">
+    <div id="header">
+      <div id="navLogo">
     <div id="nav">
      <nav class="navbar">
        <span class="icon-menu"><image id="navIcon" src="./images/icon-menu.svg"></image></span>
        <div class="nav-menu">
+        <button id="close"><image id="closeImg" src="./images/icon-close.svg"></image></button> 
          <ul class="nav-list">
            <li class="nav-item">
               <a class="nav-link" href="#">Collections</a>
@@ -40,32 +43,27 @@
    <div id="logo">
      <image id="logo" src="./images/logo.svg" ></image>
    </div>
-    </div>
-  <div id="cartAvatar">
+      </div>
+   <div id="cartAvatar">
   <div id="cartIcon" class="cartIconFull">
    <image id="cart" src="./images/icon-cart.svg"> <span id="cartIconNumber">0</span></image>
   </div>
   <div id="avatar1">
     <button id="avatar"><image id= "avatar" src="./images/image-avatar.png"></image></button> 
   </div>  
+    </div>
   </div>
-
 </header>
 <body>
-  <div class="container">
-     <div class="carAndPic">
-       <div id="sneakers">
-         <h2>sneakers</h2>
-       </div>
          <!--CART EMPTY-->
          <div class= "cart-Empty">
-          <div class="cart-Title">
-            <h4>Cart</h4>
-          </div>
-          <div class="cart-Cont">
-            <h4> Your cart is empty</h4>
-          </div>
-        </div>
+           <div class="cart-Title">
+             <h4>Cart</h4>
+           </div>
+           <div class="cart-Cont">
+             <h4> Your cart is empty</h4>
+           </div>
+         </div>
         <!--CART FULL-->
         <div class="cartFull">
           <div class="cart-Title">
@@ -122,6 +120,7 @@
         <span class="sr-only"><image class= "controls" src="./images/icon-next.svg"></image></span>
       </a>
     </div>
+    
      <div class="photos">
         <img class="imgdes" src="./images/image-product-1-thumbnail.jpg">
         <img class="imgdes" src="./images/image-product-2-thumbnail.jpg">

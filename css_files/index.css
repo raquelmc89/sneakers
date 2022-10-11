@@ -1,54 +1,58 @@
 
 html{
    font-family: "Kumbh Sans";
-
+}
     /*  HEADER  */
 
-}
-header{
-    display:flex;
-    align-items: baseline;
-
+#header{
+    display: flex;
+    flex-direction:row;
+    padding: 10px;
+    justify-content:space-between;
 }
 #navLogo{
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: flex-start;
     align-items: baseline;
+}
+
+#nav{
+
+    padding-right: 20px;
   
+
 }
-#navIcon{
-    margin-left:50px;
-}
-#logo{
-  padding-left: 10px;
-    
+.navbar{
+    list-style-type: none; 
 }
 .nav-menu{
-   
-    display: none;   
-}
-ul{
-    list-style-type: none;
+    display: none;
 }
 .nav-item{
     padding: 10px;
 }
+
 #cartAvatar{
     display: flex;
-    justify-items: baseline;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:baseline;
+    justify-items: flex-end;
+    padding-top: 8px;
 }
 #avatar{
-height: 40px;
+height: 30px;
 border: none;
 background-color: white;
 cursor: pointer;
-padding-left: 20px;
-}
+padding-left: 10px;
 
+}
 #cart{
-   padding-left: 400px;
-   padding-right: 5px;
+
+cursor: pointer;
+
 }
 
 #cartIcon span{
@@ -60,28 +64,23 @@ padding-left: 20px;
     color:white;
     margin-bottom: 10px;
     font-size: 9px;
-    cursor: pointer;
-    }
-    
- h2{
     display: none;
+   
  }
-
 
 /*  CAROUSEL  */
 
-.carousel-item{
-    position: relative;
-   
-}
 .carousel-slide{
     height: 80vh;
     width: 100%;
-    position:absolute;
+  
   
 }
 
 .controls{
+    display:block;
+}
+#carousel{
     height: 30px;
     border: solid 1px;
     width: 30px;
@@ -97,6 +96,7 @@ padding-left: 20px;
 }
 
 /*  BODY  */
+
 #snk{
    color:hsl(26, 100%, 55%);
    padding-top:25px;
@@ -242,132 +242,11 @@ p{
     text-align: center;
 
 }
-
+/*
 a{
-    color:hsl(26, 100%, 55%) ;
+    color:white ;
     text-decoration: none;
     font-size: 15px;
 }
-
-
-/*  LAPTOP  */
-
-@media only screen and (min-width: 1000px){
-
- 
-    /*  NAV  */
-   #header{
-    display:flex;
-    justify-content: space-between;
-    border-bottom: 1px solid hsl(0, 0%, 75%);
-    margin-left: 8%;
-    margin-right: 8%;
-   }
-   #nav{
-    order: 1;
-    
-   }
-   
-   #logo{
-    order:0;
-    padding-left: 10px;
-   }
-   #cart{
-    order:2;
-    padding-left: 200px
-    
-   }
-   #avatar1{
-    order:3
-   }
-   /*  BODY  */
-  
-
- 
-
-   .container{
-    display:flex;
-    flex-direction: row;
-    
-    
-    
-   }
-   .photos{
-    display: flex;
-    max-width: 50%;
-    width: 650px;
-   
-
-   }
-   .imgdes{
-   display: flex;
-    padding: 20px;
-    border-radius: 30px;
-    max-width: 50%;
-    margin-top: 20px;
-    
-    
-   }
-.carAndPic{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    width:550px;
-    height: 700px;
-    padding-left:100px;
-    padding-top: 50px;
-    
-}
-
-#description{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 50%;
-    margin-left: 10%;
-
-}
-
-p{
-    width: 400px;
-    padding-top: 20px;
-}
-
-#prize{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    font-size: 25px;
-   
-}
-#prize1{
-    font-size:25px;
-
-    
-}
-
-#prize2{
-   text-align: left; 
-
-  
-}
- .cart {
-    display: flex;
-    flex-direction: row;
-
- }
- #addCart{
-    width:40%;
-    margin-right: 20px;
- }
-#addCart2{
-    width: 80%;
-}
-.attribution{
-    display: flex;
-    align-content: center;
-   justify-content: center;
-
-}
-}
+/*
 

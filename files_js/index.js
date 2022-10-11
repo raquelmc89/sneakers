@@ -3,7 +3,6 @@
 
 const navIcon = document.querySelector('.icon-menu');
 const navMenu = document.querySelector('.nav-menu');
-console.log("🚀 ~ file: index.js ~ line 6 ~ navMenu", navMenu)
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
 const addCart = document.getElementById('addToCart');
@@ -20,6 +19,7 @@ const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
 
+
  //MENU
 
 navIcon.addEventListener('click', showMenu);
@@ -27,8 +27,16 @@ navIcon.addEventListener('click', showMenu);
 function showMenu(event){
      const showMenuButton = event.target;
      navMenu.style.display = navMenu.style.display == "none" ?
-     "block" : "none";
-   
+     "block" : "block";
+     navIcon.style.display = "none";
+
+     document.getElementById('close').addEventListener('click', close);
+         function close(event){
+            const closeButton = event.target;
+            navMenu.style.display = "none";
+            navIcon.style.display ="block";
+           
+         };
    
 }   
 
@@ -50,7 +58,7 @@ prize2.innerText= '$' + prize + '.00';
 //get the object, quantity and prize
 const sneakers = {
   id:"01",
-  name:"Autum Limited Edition...",
+  name:"sneakers",
   prize:calcPercent(250.00,50),
   amount: 0,
   image:"image-product1-thumbnail.jpg"
@@ -68,10 +76,10 @@ function minusButtonClicked(event){
     const button = event.target;
     quantityInput.value = --sneakers.amount;
     const quantity =  quantityInput.value;
-    let storageQuantityDown = window.localStorage.setItem('quantity',quantity);
+    window.localStorage.setItem('quantity',quantity);
     const  prizeDown = ((sneakers.prize)*(quantityInput.value));
     quantityInput.value < 0 ? (quantityInput.value = ++sneakers.amount) : null
-    let storagePrizeDown = window.localStorage.setItem('prize',prizeDown);
+    window.localStorage.setItem('prize',prizeDown);
     
 };
 
@@ -82,10 +90,9 @@ plusButton.addEventListener('click', plusButtonClicked);
 function plusButtonClicked(event){
     const plusButtonClicked = event.target;
     quantityInput.value = ++sneakers.amount;
-    const quantityUp = quantityInput.value;
-    let storageQuantityUp = window.localStorage.setItem('quantity',quantityInput.value);
+    window.localStorage.setItem('quantity',quantityInput.value);
     const prizeUp = ((sneakers.prize)*(quantityInput.value));
-    let storagePrizeUp = window.localStorage.setItem('prize',prizeUp)
+    window.localStorage.setItem('prize',prizeUp)
   
 minusButtonClicked
 
@@ -97,6 +104,7 @@ function addToCartClicked(event){
    const buttonClicked = event.target;
    cartIconNumber.innerText = quantityInput.value;  
    const itemAmount =  Number(cartIconNumber.innerText);
+   itemAmount > 0 ? cartIconNumber.style.display="inline": null;
    
 }
 
@@ -149,7 +157,7 @@ function cartIconClicked(event){
     cartIconNumber.innerText == 0 ?
     cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
   
-    quantityFromStorage= localStorage.getItem('quantity');
+    quantityFromStorage = localStorage.getItem('quantity');
     prizeFromStorage = localStorage.getItem('prize');
    
     totalPrize.innerText = prizeFromStorage;
@@ -165,10 +173,10 @@ function cartIconClicked(event){
         function removeShoppingItem(event){
         const buttonDelete = event.target;
         cartIconNumber.innerText > 0 ? 
-        cartFull.classList.toggle("cartFull") : 
-        null;
+        cartFull.classList.toggle("cartFull") : null;
         cartIconNumber.innerHTML = 0;
-        
+        cartIconNumber.style.display="none";
+
       }
       
 } ;
