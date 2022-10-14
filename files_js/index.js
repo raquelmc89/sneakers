@@ -1,6 +1,4 @@
 
-
-
 const navIcon = document.querySelector('.icon-menu');
 const navMenu = document.querySelector('.nav-menu');
 const prize1 = document.getElementById('prize1');
@@ -109,8 +107,8 @@ function addToCartClicked(event){
 }
 
 
-
 /*
+
 let shoppingCartRow = document.createElement('div'); 
 const shoppingCartContent = `<div class="row cartFull">
 <div class="cart col">

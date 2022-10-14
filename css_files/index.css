@@ -9,29 +9,34 @@ html{
     flex-direction:row;
     padding: 10px;
     justify-content:space-between;
+ 
 }
 #navLogo{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
+   
 }
 
 #nav{
 
     padding-right: 20px;
-  
-
+    
 }
 .navbar{
-    list-style-type: none; 
-}
+    list-style-type: none;
+ 
+    }
+
 .nav-menu{
     display: none;
+   
 }
 .nav-item{
     padding: 10px;
 }
+
 
 #cartAvatar{
     display: flex;
@@ -48,10 +53,12 @@ background-color: white;
 cursor: pointer;
 padding-left: 10px;
 
+
 }
 #cart{
 
 cursor: pointer;
+
 
 }
 
@@ -65,22 +72,15 @@ cursor: pointer;
     margin-bottom: 10px;
     font-size: 9px;
     display: none;
+
    
  }
 
+
 /*  CAROUSEL  */
 
-.carousel-slide{
+.carouselSneakers{
     height: 80vh;
-    width: 100%;
-  
-  
-}
-
-.controls{
-    display:block;
-}
-#carousel{
     height: 30px;
     border: solid 1px;
     width: 30px;
@@ -90,13 +90,14 @@ cursor: pointer;
     
 }
 
-.photos{
- 
-    display: none;
+.carousel-indicators{
+    display:none;
 }
 
 /*  BODY  */
-
+body{
+    position:absolute
+}
 #snk{
    color:hsl(26, 100%, 55%);
    padding-top:25px;
@@ -124,6 +125,7 @@ p{
     display: flex;
     flex-direction: column;
     padding-left: 25px;
+   
    
     
     
@@ -235,18 +237,16 @@ p{
 
 
 /*  FOOTER  */
-
+footer{
+    position:absolute;
+}
 .attribution{
+   
     margin-top: 60px;
     font-size: 15px;
     text-align: center;
 
 }
-/*
-a{
-    color:white ;
-    text-decoration: none;
-    font-size: 15px;
-}
-/*
+
+
 

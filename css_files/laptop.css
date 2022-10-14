@@ -1,9 +1,8 @@
 /*  LAPTOP  */
-
+  
 @media only screen and (min-width: 1000px){
-
- 
-    /*  NAV  */
+    
+  /*  NAV  */
    #header{
     display:flex;
     justify-content: space-between;
@@ -11,52 +10,79 @@
     margin-left: 8%;
     margin-right: 8%;
    }
-   #nav{
-    order: 1;
-    
-   }
    
-   #logo{
-    order:0;
-    padding-left: 10px;
+   .icon-menu{
+    display:none;
+}
+    #nav{
+order:1;
+    }
+   
+   .nav-menu{
+    display:flex;
+   
    }
+
+   ul{
+    display: inline-flex;
+    list-style-type: none;
+   }
+
+   #close{
+    display: none;
+   }
+
+  #logo{
+    padding-left: 10px;
+    order:0;
+   }
+
    #cart{
-    order:2;
+ 
     padding-left: 200px
     
    }
-   #avatar1{
-    order:3
-   }
-   /*  BODY  */
   
+   /*  BODY  */
+body{
+    position:relative;
+}
 
- 
-
-   .container{
+   #mainContainer{
     display:flex;
     flex-direction: row;
     
-    
+   }
+   
+  /*  CAROUSEL  */
+#controls{
+    display: none;
+}
+   #imgdes{
+    display: flex;
+    margin: 20px;
+    margin-top: -10px;
+    background-color: white;
+    border:none;
+    cursor:pointer;
     
    }
-   .photos{
-    display: flex;
-    max-width: 50%;
-    width: 650px;
-   
+   .carousel-indicators{
+    display:flex;
+    justify-content: space-around;
+    width: 500px;
 
    }
-   .imgdes{
-   display: flex;
-    padding: 20px;
-    border-radius: 30px;
-    max-width: 50%;
-    margin-top: 20px;
-    
-    
+  
+   .img-fluid{
+    display: flex;
+    border-radius: 20%;
+    border:hsl(26, 100%, 55%);
+    height: 80px;
+    width: 100px;
    }
-.carAndPic{
+
+#carouselSneakers{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
@@ -66,7 +92,9 @@
     padding-top: 50px;
     
 }
-
+.carousel-inner{
+    border-radius: 10%;
+}
 #description{
     display: flex;
     flex-direction: column;
@@ -111,6 +139,7 @@ p{
 #addCart2{
     width: 80%;
 }
+
 .attribution{
     display: flex;
     align-content: center;
@@ -118,4 +147,3 @@ p{
 
 }
 }
-
