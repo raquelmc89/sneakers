@@ -23,8 +23,13 @@
      <div id="navLogo">
        <div id="nav">
          <nav class="navbar">
-           <span class="icon-menu"><image id="navIcon" src="./images/icon-menu.svg"></image></span>
-             <div class="nav-menu">
+           <button class="icon-menu"
+           class="icon-menu btn btn-primary dropdown-toggle"
+           type="button"
+           id="dropdownMenuButton"
+           data-mdb-toggle="dropdown"
+           aria-expanded="false"><image id="navIcon" src="./images/icon-menu.svg"></image></button>
+           <div class= "nav-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
                <button id="close"><image id="closeImg" src="./images/icon-close.svg"></image></button> 
                <ul class="nav-list">
                 <li class="nav-item">
@@ -47,17 +52,34 @@
        </div>
       </div>
     <div id="cartAvatar">
-      <div id="cartIcon" class="cartIconFull">
+      <button id="cartIcon" class="cartIconFull"
+      class="btn btn-primary dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-mdb-toggle="dropdown"
+      aria-expanded="false">
         <image id="cart" src="./images/icon-cart.svg"> <span id="cartIconNumber">0</span></image>
-      </div>
+      </button>
       <div id="avatar1">
         <button id="avatar"><image id= "avatar" src="./images/image-avatar.png"></image></button> 
       </div>  
     </div>
   </div>
      <!--CART EMPTY-->
-     <div class= "cart-Empty">
-      <div class="cart-Title">
+       <!--<div class="dropdown">
+        <button
+          
+        >
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>-->
+     
+     <div class= "cart-Empty dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="cart-Title ">
         <h4>Cart</h4>
       </div>
       <div class="cart-Cont">

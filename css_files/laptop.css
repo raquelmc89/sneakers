@@ -22,7 +22,9 @@ order:1;
     display:flex;
    
    }
-
+.nav-list{
+    display:none;
+}
    ul{
     display: inline-flex;
     list-style-type: none;
