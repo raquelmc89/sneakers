@@ -22,101 +22,93 @@
   <div id="header">
      <div id="navLogo">
        <div id="nav">
-         <nav class="navbar">
-           <button class="icon-menu"
-           class="icon-menu btn btn-primary dropdown-toggle"
-           type="button"
-           id="dropdownMenuButton"
-           data-mdb-toggle="dropdown"
-           aria-expanded="false"><image id="navIcon" src="./images/icon-menu.svg"></image></button>
-           <div class= "nav-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
-               <button id="close"><image id="closeImg" src="./images/icon-close.svg"></image></button> 
-               <ul class="nav-list">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Collections</a>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Men</a>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Women</a>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+            <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+             <image id="navIcon" src="./images/icon-menu.svg"></image></button>
+            </button>
+            <!-- Modal -->
+            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="nav-menu">
+                  <div class="modal-body">
+                    <button type="button" class="btn" data-mdb-dismiss="modal"><image id="closeImg" src="./images/icon-close.svg"></image></button>
+                    <ul class="nav-list">
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Collections</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Men</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Women</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">About</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+               </div>
+             </div>
+           </div>
+         </nav>
        </div>
        <div id="logo">
          <image id="logo" src="./images/logo.svg" ></image>
        </div>
       </div>
-    <div id="cartAvatar">
-      <button id="cartIcon" class="cartIconFull"
-      class="btn btn-primary dropdown-toggle"
-      type="button"
-      id="dropdownMenuButton"
-      data-mdb-toggle="dropdown"
-      aria-expanded="false">
-        <image id="cart" src="./images/icon-cart.svg"> <span id="cartIconNumber">0</span></image>
-      </button>
+      <div id="cartAvatar">
+        <button id="cartIcon">
+         <img id="cart" src="./images/icon-cart.svg"/>
+          <span id="cartIconNumber">0</span>
+          </button>
+
+         <!--CART EMPTY-->
+        <div class= "cart-Empty">
+          <div class="cart-Title" >
+            <h4>Cart</h4>
+          </div>
+          <div class="cart-Cont">
+            <h4> Your cart is empty</h4>
+         </div>
+        </div>
+         <!--CART FULL-->
+      <div class="cartFull">
+        <div class="cartContent">
+          <div class="cart-Title">
+            <h4>Cart</h4>
+          </div>
+          <div class="cart-img">
+             <img id="imgCart" class='cart-item' src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
+          </div>
+          <div class="cart-item">
+             <div class = "cart-name">
+                 <h6>Autumn Limited Edition...</h6>
+             </div>
+             <div class="numbers">
+                 <div class="cart-prize">
+                   <p id="sneakers.prize"> </p>
+                 </div> 
+                 <div class="cart-amount">
+                   <p id="quantityFromStorage"></p>
+                 </div>
+                 <div class="cart-total">
+                   <p id="prizeFromStorage"><p>
+                 </div>
+                 <div class="cart-delete">
+                   <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
+                 </div>
+                 <span id="checkout">Checkout</span>
+              </div>
+             
+          </div>
+       </div>
+      </div>
       <div id="avatar1">
         <button id="avatar"><image id= "avatar" src="./images/image-avatar.png"></image></button> 
       </div>  
     </div>
   </div>
-     <!--CART EMPTY-->
-       <!--<div class="dropdown">
-        <button
-          
-        >
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </ul>-->
-     
-     <div class= "cart-Empty dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <div class="cart-Title ">
-        <h4>Cart</h4>
-      </div>
-      <div class="cart-Cont">
-        <h4> Your cart is empty</h4>
-      </div>
-  </div>
-      <!--CART FULL-->
-  <div class="cartFull">
-     <div class="cart-Title">
-        <h4>Cart</h4>
-     </div>
-     <div class="cartContent">
-        <div class="cart-img">
-            <img id="imgCart" class='cart-item' src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
-        </div>
-        <div class="cart-item">
-            <div class = "cart-name">
-                <h6>Autumn Limited Edition...</h6>
-            </div>
-            <div class=" numbers">
-                <div class="cart-prize">
-                  <p id="sneakers.prize"> </p>
-                </div> 
-                <div class="cart-amount">
-                  <p id="quantityFromStorage"></p>
-                </div>
-                <div class="cart-total">
-                  <p id="prizeFromStorage"><p>
-                </div>
-                <div class="cart-delete">
-                  <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
-                </div>
-             </div>
-         </div>
-      </div>
-         <button id="checkout">Checkout</button>    
-     </div>
+ 
          <!--END FOR CART-->
 </header>
 <body>
@@ -138,20 +130,17 @@
       <img src="./images/image-product-4.jpg" class="d-block w-100"  alt="..." />
     </div>
   </div>
- 
-  <!-- Slides -->
-
   <!-- Controls -->
-  <div id="controls"><
+  <div id="controls">
   <button class="carousel-control-prev" type="button" data-mdb-target="#carouselSneakers"
-    data-mdb-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    data-mdb-slide="prev" > <img class="controls" src="./images/icon-previous.svg">
+   <!--- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>-->
   </button>
   <button class="carousel-control-next" type="button" data-mdb-target="#carouselSneakers"
     data-mdb-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <!--<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>--><img  class="controls" src="./images/icon-next.svg">
   </button>
   </div>
 

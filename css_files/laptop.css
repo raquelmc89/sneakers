@@ -10,21 +10,17 @@
     margin-left: 8%;
     margin-right: 8%;
    }
-   
-   .icon-menu{
-    display:none;
+  
+.nav-menu{
+    display: flex;
+    width: fit-content;
 }
-    #nav{
+.nav-link{
 order:1;
+display: flex;
     }
-   
-   .nav-menu{
-    display:flex;
-   
-   }
-.nav-list{
-    display:none;
-}
+
+
    ul{
     display: inline-flex;
     list-style-type: none;
@@ -45,6 +41,22 @@ order:1;
     
    }
   
+
+  #nav{
+    display:flex;
+    order: 1;
+   }
+   #logo{
+    order:0;
+    padding-left: 10px;
+   }
+   #cart{
+    order:2
+    
+   }
+   #avatar1{
+    order:3
+   }
    /*  BODY  */
 body{
     position:relative;

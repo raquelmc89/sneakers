@@ -1,6 +1,4 @@
 
-const navIcon = document.querySelector('.icon-menu');
-const navMenu = document.querySelector('.nav-menu');
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
 const addCart = document.getElementById('addToCart');
@@ -17,26 +15,16 @@ const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
 
+if (window.innerWidth > 1000){
+     console.log("🚀 ~ file: index.js ~ line 19 ~ window.innerWidth", window.innerWidth)
+     const modalOut= document.querySelectorAll(".modal");
+    modalOut.forEach(modal => {
+    modal.remove();
+    })
+    document.getElementById("navIcon").style.display="none";
+    document.getElementById("nav-menu").style.display="block";
 
- //MENU
-
-navIcon.addEventListener('click', showMenu);
-
-function showMenu(event){
-     const showMenuButton = event.target;
-     navMenu.style.display = navMenu.style.display == "none" ?
-     "block" : "block";
-     navIcon.style.display = "none";
-
-     document.getElementById('close').addEventListener('click', close);
-         function close(event){
-            const closeButton = event.target;
-            navMenu.style.display = "none";
-            navIcon.style.display ="block";
-           
-         };
-   
-}   
+  }
 
 
 //PRIZE
@@ -115,16 +103,15 @@ function cartIconClicked(event){
 
     cartIconNumber.innerText == 0 ?
     cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
-    quantityFromStorage = localStorage.getItem('quantity');
-    prizeFromStorage = localStorage.getItem('prize');
-   
-    totalPrize.innerText = prizeFromStorage;
-    squantity.innerText= "X" + quantityFromStorage;
-    sprize.innerText ="$" + sneakers.prize + ".00";
+        quantityFromStorage = localStorage.getItem('quantity');
+        prizeFromStorage = localStorage.getItem('prize');
+       
+        totalPrize.innerText = prizeFromStorage;
+        squantity.innerText= "X" + quantityFromStorage;
+        sprize.innerText ="$" + sneakers.prize + ".00";
 
-   
-    
-    cartFull
+
+	   cartFull
     .querySelector('.delete')
     .addEventListener('click', removeShoppingItem);
     
@@ -134,11 +121,12 @@ function cartIconClicked(event){
         cartFull.classList.toggle("cartFull") : null;
         cartIconNumber.innerHTML = 0;
         cartIconNumber.style.display="none";
-
-      }
       
-} ;
-
+      }
     
+}
+
+
+
 
       
