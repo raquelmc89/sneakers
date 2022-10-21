@@ -14,18 +14,94 @@ const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
+const navElements = document.getElementById('navMenu');
 
-if (window.innerWidth > 1000){
+/*window.onresize = function() {
+    const modalOut= document.querySelectorAll(".modal");
+    modalOut.forEach(modal => {
+     modal.remove();
+   })
+   document.getElementById("navIcon").style.display="none";
+   const newDiv = document.createElement("div");
+   const navMenu = ` 
+   <ul class="nav-list">
+   <li class="nav-item">
+    <a class="nav-link" href="#">Collections</a>
+   <li class="nav-item">
+    <a class="nav-link" href="#">Men</a>
+   <li class="nav-item">
+    <a class="nav-link" href="#">Women</a>
+   <li class="nav-item">
+    <a class="nav-link" href="#">About</a>
+   <li class="nav-item">
+    <a class="nav-link" href="#">Contact</a>
+   </li>
+ </ul>
+  `
+ newDiv.innerHTML = navMenu;
+ navElements.append(newDiv);
+
+};
+/*$(document).ready(function(){
+    $(window).resize(function(){
+        const modalOut= document.querySelectorAll(".modal");
+        modalOut.forEach(modal => {
+         modal.remove();
+       })
+       document.getElementById("navIcon").style.display="none";
+       const newDiv = document.createElement("div");
+       const navMenu = ` 
+       <ul class="nav-list">
+       <li class="nav-item">
+        <a class="nav-link" href="#">Collections</a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Men</a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Women</a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+       <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+       </li>
+     </ul>
+      `
+     newDiv.innerHTML = navMenu;
+     navElements.append(newDiv);
+   
+   
+    });
+  });*/
+/*
+   if (window.innerWidth > 1000){
      console.log("🚀 ~ file: index.js ~ line 19 ~ window.innerWidth", window.innerWidth)
      const modalOut= document.querySelectorAll(".modal");
-    modalOut.forEach(modal => {
-    modal.remove();
+     modalOut.forEach(modal => {
+      modal.remove();
     })
     document.getElementById("navIcon").style.display="none";
-    document.getElementById("nav-menu").style.display="block";
+    const newDiv = document.createElement("div");
+    const navMenu = ` 
+    <ul class="nav-list">
+    <li class="nav-item">
+     <a class="nav-link" href="#">Collections</a>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Men</a>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Women</a>
+    <li class="nav-item">
+     <a class="nav-link" href="#">About</a>
+    <li class="nav-item">
+     <a class="nav-link" href="#">Contact</a>
+    </li>
+  </ul>
+   `
+  newDiv.innerHTML = navMenu;
+  navElements.append(newDiv);
 
-  }
+    
+}
 
+*/
 
 //PRIZE
 

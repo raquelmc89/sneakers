@@ -23,7 +23,9 @@ html{
     align-items: baseline;
    
 }
-
+.navList{
+    display:none;
+}
 /* MENU  */
 
 .modal-content{
