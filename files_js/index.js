@@ -14,53 +14,47 @@ const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
+const myCarousel = document.getElementById('myCarousel')
+console.log("🚀 ~ file: index.js ~ line 18 ~ myCarousel", myCarousel)
 
 
-/*$(document).ready(function(){
-    $(window).resize(function(){
-        const modalOut= document.querySelectorAll(".modal");
-        modalOut.forEach(modal => {
-         modal.remove();
-       })
-       document.getElementById("navIcon").style.display="none";
-       const newDiv = document.createElement("div");
-       const navMenu = ` 
-       <ul class="nav-list">
-       <li class="nav-item">
-        <a class="nav-link" href="#">Collections</a>
-       <li class="nav-item">
-        <a class="nav-link" href="#">Men</a>
-       <li class="nav-item">
-        <a class="nav-link" href="#">Women</a>
-       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-       <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-       </li>
-     </ul>
-      `
-     newDiv.innerHTML = navMenu;
-     navElements.append(newDiv);
-   
-   
-    });
-  });*/
 // THUMNNAILS 
 $(document).ready(function(){
     $(".img-fluid").click(function(){
        var modal = document.getElementById('myModal')
+       const carouselBack = document.getElementById("#")
        var carousel = document.getElementById('fullCarousel');
        var modalImg = carousel;
        modal.style.display = "block";
-       modal.append(modalImg)
-    
-       var close = document.getElementById("closeCarousel");
+       modal.append(modalImg);
+      
        
-             close.onclick = function() { 
-             modal.style.display = "none";
-             }
-     });
-});   
+            
+            $("#closeCarousel").click(function(){
+                modal.style.display = "none";
+
+                /*modal.remove(modalImg)*/
+                myCarousel.append(carousel)
+               /*$(modal).toggle();*/
+                
+             })
+             $(window).resize(function(){
+             
+                modal.style.display = "none";
+                
+             })
+     })
+    
+});  
+
+window.addEventListener("resize", resize);
+
+function resize(event){
+    resizeButton = event.target;
+
+}
+
+
 //PRIZE
 
 let prize = 250.00
