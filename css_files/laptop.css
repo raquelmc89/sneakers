@@ -64,9 +64,9 @@ text-decoration: none;
    }
    
   /*  CAROUSEL  */
-#controls{
+/*#controls{
     display: none;
-}
+}*/
    #imgdes{
     display: flex;
     margin: 20px;
