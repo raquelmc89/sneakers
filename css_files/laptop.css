@@ -64,9 +64,7 @@ text-decoration: none;
    }
    
   /*  CAROUSEL  */
-/*#controls{
-    display: none;
-}*/
+
    #imgdes{
     display: flex;
     margin: 20px;
@@ -79,16 +77,40 @@ text-decoration: none;
    .carousel-indicators{
     display:flex;
     justify-content: space-around;
-    width: 500px;
-
+    width:500px;
+    
    }
+   #controls{
+    display: none;
+   }
+  .controls{
+    width:60px;
+    height:60px;
+    background:fixed;
+    background-color: white;
+    padding:20px;
+    
+  }
+
+  .carousel-control-prev
   
+  {
+    margin: 60px;
+    height:400px;
+  }
+
+  .carousel-control-next{
+   height: 600px;
+   margin:-39px;
+
+  }
    .img-fluid{
     display: flex;
     border-radius: 20%;
     border:hsl(26, 100%, 55%);
     height: 80px;
     width: 100px;
+  
    }
 
 #carouselSneakers{

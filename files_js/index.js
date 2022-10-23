@@ -1,4 +1,4 @@
-
+const myCarousel = document.getElementById('myCarousel')
 const prize1 = document.getElementById('prize1');
 const prize2 = document.getElementById('prize2');
 const addCart = document.getElementById('addToCart');
@@ -14,7 +14,7 @@ const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
-const myCarousel = document.getElementById('myCarousel')
+
 console.log("🚀 ~ file: index.js ~ line 18 ~ myCarousel", myCarousel)
 
 
@@ -22,37 +22,30 @@ console.log("🚀 ~ file: index.js ~ line 18 ~ myCarousel", myCarousel)
 $(document).ready(function(){
     $(".img-fluid").click(function(){
        var modal = document.getElementById('myModal')
-       const carouselBack = document.getElementById("#")
        var carousel = document.getElementById('fullCarousel');
        var modalImg = carousel;
        modal.style.display = "block";
        modal.append(modalImg);
+       const carouselControls = document.getElementById("controls");
+       carouselControls.style.display="block";
+
       
-       
-            
             $("#closeCarousel").click(function(){
                 modal.style.display = "none";
+                myCarousel.append(carousel);
+                carouselControls.style.display="none"
 
-                /*modal.remove(modalImg)*/
-                myCarousel.append(carousel)
-               /*$(modal).toggle();*/
-                
-             })
+             });
+
              $(window).resize(function(){
-             
-                modal.style.display = "none";
+              modal.style.display = "none";
+              myCarousel.append(carousel)
                 
              })
      })
     
 });  
 
-window.addEventListener("resize", resize);
-
-function resize(event){
-    resizeButton = event.target;
-
-}
 
 
 //PRIZE

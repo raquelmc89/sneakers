@@ -128,9 +128,9 @@ background-color: white;
 }
 
 .controls{
-    height: 30px;
-    border: solid 1px;
-    width: 30px;
+   /* height: 30px;*/
+    /*border: solid 1px;*/
+    /*width: 30px;*/
     background-color:  white;
     border-radius: 50px;
     padding:8px;
