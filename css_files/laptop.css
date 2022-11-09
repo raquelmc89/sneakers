@@ -1,0 +1,180 @@
+/*  LAPTOP  */
+  
+@media only screen and (min-width: 1000px){
+    
+  /*  NAV  */
+   #header{
+    display:flex;
+    justify-content: space-between;
+    border-bottom: 1px solid hsl(0, 0%, 75%);
+    margin-left: 8%;
+    margin-right: 8%;
+    align-items: center;
+    
+   }
+
+  /* #navLogo{
+    align-items: baseline;
+   }*/
+  #navIcon{
+    display:none;
+  }
+
+
+.navList{
+   
+    display: flex;
+    list-style-type: none;
+   
+}
+.navLink{
+
+display: flex;
+color:black;
+text-decoration: none;
+ }
+
+  #logo{
+    
+    padding-left: 10px;
+    order:0;
+
+   }
+
+   #cart{
+ 
+    padding-left: 200px
+    
+   }
+
+  #nav{
+    display:flex;
+    order: 1;
+   }
+ 
+ #navLogo{
+    align-items: center;
+ }
+   /*  BODY  */
+
+   #mainContainer{
+    display:flex;
+    flex-direction: row;
+    
+   }
+   
+  /*  CAROUSEL  */
+
+   #imgdes{
+    display: flex;
+    margin: 20px;
+    margin-top: -10px;
+    background-color: white;
+    border:none;
+    cursor:pointer;
+    
+   }
+   .carousel-indicators{
+    display:flex;
+    justify-content: space-around;
+    width:500px;
+    
+   }
+   #controls{
+    display: none;
+   }
+  .controls{
+    width:60px;
+    height:60px;
+    background:fixed;
+    background-color: white;
+    padding:20px;
+    
+  }
+
+  .carousel-control-prev
+  
+  {
+    margin: 60px;
+    height:400px;
+  }
+
+  .carousel-control-next{
+   height: 600px;
+   margin:-39px;
+
+  }
+   .img-fluid{
+    display: flex;
+    border-radius: 20%;
+    border:hsl(26, 100%, 55%);
+    height: 80px;
+    width: 100px;
+  
+   }
+
+#carouselSneakers{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width:550px;
+    height: 700px;
+    padding-left:100px;
+    padding-top: 50px;
+    
+}
+.carousel-inner{
+    border-radius: 10%;
+}
+#description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    margin-left: 10%;
+
+}
+
+p{
+    width: 400px;
+    padding-top: 20px;
+}
+
+#prize{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    font-size: 25px;
+   
+}
+#prize1{
+    font-size:25px;
+
+    
+}
+
+#prize2{
+   text-align: left; 
+
+  
+}
+ .cart {
+    display: flex;
+    flex-direction: row;
+
+ }
+ #addCart{
+    width:40%;
+    margin-right: 20px;
+ }
+#addCart2{
+    width: 80%;
+}
+
+.attribution{
+    display: flex;
+    align-content: center;
+   justify-content: center;
+
+}
+}
