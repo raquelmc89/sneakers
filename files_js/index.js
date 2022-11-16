@@ -14,12 +14,21 @@ const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
+const navList = document.getElementsByTagName('a')
 
-console.log("🚀 ~ file: index.js ~ line 18 ~ myCarousel", myCarousel)
 
+if(window.innerWidth>1000){
+    const list=navList.length
+    text=""
+    for (let i = 0; i < list; i++){
+        text += list[i];
+    }
+}
 
 // THUMNNAILS 
 $(document).ready(function(){
+
+
     $(".img-fluid").click(function(){
        var modal = document.getElementById('myModal')
        var carousel = document.getElementById('fullCarousel');
@@ -40,7 +49,8 @@ $(document).ready(function(){
              $(window).resize(function(){
               modal.style.display = "none";
               myCarousel.append(carousel)
-                
+           
+
              })
      })
     
@@ -101,7 +111,7 @@ function plusButtonClicked(event){
     const prizeUp = ((sneakers.prize)*(quantityInput.value));
     window.localStorage.setItem('prize',prizeUp)
   
-minusButtonClicked
+    minusButtonClicked
 
 }
 

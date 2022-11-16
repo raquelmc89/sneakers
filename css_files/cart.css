@@ -4,17 +4,11 @@
 .cart-Empty{
     display:none;
     border-radius:30px;
-    width: 50%;
+    width: 300px;
     height:60vh;
     width: fit-content;
     margin-top: 80px;
-    z-index: 999;
-
-
-
-
-  
-  }
+}
   .cart-Title{
     border-bottom: solid hsl(0, 0%, 75%);
     margin-left:10px;
@@ -37,7 +31,8 @@
 .cartFull{
     display: none;
     position:absolute;
-     z-index: 9999;
+    z-index: 3;
+   
 }
 
 .cartContent{

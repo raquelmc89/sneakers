@@ -19,30 +19,15 @@
 
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
-<header>
+<body>
+ <header>
   <div id="header">
      <div id="navLogo">
-       <div id="nav">
-         <div id="navMenu">
-           <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-              <image id="navIcon" src="./images/icon-menu.svg"></image></button>
-           </button>
-           <ul class="navList">
-             <li class="nav-item">
-              <a class="navLink" href="#">Collections</a>
-             <li class="nav-item">
-              <a class="navLink" href="#">Men</a>
-             <li class="nav-item">
-              <a class="navLink" href="#">Women</a>
-             <li class="nav-item">
-              <a class="navLink" href="#">About</a>
-             <li class="nav-item">
-              <a class="navLink" href="#">Contact</a>
-             </li>
-           </ul>
-         </div>
-      
-            <!-- Modal -->
+        <div id="nav">
+          <div id="navMenu">
+            <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+               <image id="navIcon" src="./images/icon-menu.svg"></image></button>
+            </button>
             <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -67,8 +52,8 @@
                </div>
              </div>
             </div>
-            <!--End Modal-->
-       </div>
+          </div>
+        </div>
        <div id="logo">
          <img id="logoImg" src="./images/logo.svg"/>
        </div>
@@ -79,76 +64,74 @@
           <span id="cartIconNumber">0</span>
           </button>
 
-         <!--CART EMPTY-->
-        <div class= "cart-Empty">
-          <div class="cart-Title" >
-            <h4>Cart</h4>
+          <!--CART EMPTY-->
+          <div class= "cart-Empty">
+            <div class="cart-Title" >
+              <h4>Cart</h4>
+            </div>
+            <div class="cart-Cont">
+              <h4> Your cart is empty</h4>
+           </div>
           </div>
-          <div class="cart-Cont">
-            <h4> Your cart is empty</h4>
+           <!--CART FULL-->
+        <div class="cartFull">
+          <div class="cartContent">
+            <div class="cart-Title">
+              <h4>Cart</h4>
+            </div>
+            <div class="cart-img">
+               <img id="imgCart" class='cart-item' src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
+            </div>
+            <div class="cart-item">
+               <div class = "cart-name">
+                   <h6>Autumn Limited Edition...</h6>
+               </div>
+               <div class="numbers">
+                   <div class="cart-prize">
+                     <p id="sneakers.prize"> </p>
+                   </div> 
+                   <div class="cart-amount">
+                     <p id="quantityFromStorage"></p>
+                   </div>
+                   <div class="cart-total">
+                     <p id="prizeFromStorage"><p>
+                   </div>
+                   <div class="cart-delete">
+                     <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
+                   </div>
+                   <span id="checkout">Checkout</span>
+                </div>
+            </div>
          </div>
         </div>
-         <!--CART FULL-->
-      <div class="cartFull">
-        <div class="cartContent">
-          <div class="cart-Title">
-            <h4>Cart</h4>
-          </div>
-          <div class="cart-img">
-             <img id="imgCart" class='cart-item' src="./images/image-product-1-thumbnail.jpg" class="shopping-cart-image">
-          </div>
-          <div class="cart-item">
-             <div class = "cart-name">
-                 <h6>Autumn Limited Edition...</h6>
-             </div>
-             <div class="numbers">
-                 <div class="cart-prize">
-                   <p id="sneakers.prize"> </p>
-                 </div> 
-                 <div class="cart-amount">
-                   <p id="quantityFromStorage"></p>
-                 </div>
-                 <div class="cart-total">
-                   <p id="prizeFromStorage"><p>
-                 </div>
-                 <div class="cart-delete">
-                   <button class= "delete" type="button"><img src="./images/icon-delete.svg" class="shopping-cart-image"></button>      
-                 </div>
-                 <span id="checkout">Checkout</span>
-              </div>
-             
-          </div>
-       </div>
-      </div>
-      <div id="avatar1">
-        <button id="avatar"><image id= "avatar" src="./images/image-avatar.png"></image></button> 
-      </div>  
-    </div>
+           <!--END FOR CART-->
+          <div id="avatar1">
+            <button id="avatar"><image id= "avatar" src="./images/image-avatar.png"></image></button> 
+          </div>  
    </div>
- 
-         <!--END FOR CART-->
+  </div>
 </header>
-<body>
 <div id="mainContainer">
   <div id="myCarousel">
       <div id="fullCarousel">
          <!--Carousel wrapper -->
         <div id="carouselSneakers" class="carousel slide carousel-slide" data-mdb-ride="carousel"> 
-          <!-- Slides -->
+                <!-- Slides -->
            <div class="carousel-inner">
-             <div class="carousel-item active">
-              <img src="./images/image-product-1.jpg" class="d-block w-100" alt="..." />
-             </div>
-             <div class="carousel-item">
-              <img src="./images/image-product-2.jpg" class="d-block w-100"  alt="..." />
-             </div>
-             <div class="carousel-item">
-               <img src="./images/image-product-3.jpg" class="d-block w-100"  alt="..." />
-             </div>
-             <div class="carousel-item">
-              <img src="./images/image-product-4.jpg" class="d-block w-100"  alt="..." />
-             </div>
-           </div>
+              <div class="carousel-item active">
+               <img src="./images/image-product-1.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+               <img src="./images/image-product-2.jpg" class="d-block w-100"  alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="./images/image-product-3.jpg" class="d-block w-100"  alt="..." />
+              </div>
+              <div class="carousel-item">
+               <img src="./images/image-product-4.jpg" class="d-block w-100"  alt="..." />
+              </div>
+            </div>
+          
            <!-- Controls -->
         <div id="controls">
           <button class="carousel-control-prev" type="button" data-mdb-target="#carouselSneakers"
@@ -157,7 +140,7 @@
          <button class="carousel-control-next" type="button" data-mdb-target="#carouselSneakers"
             data-mdb-slide="next"> <img  class="controls" src="./images/icon-next.svg">
          </button>
-        </div>
+        </div>  
            <!--Thumbnails-->
         <div class="carousel-indicators">
           <button id="imgdes"type="button" data-mdb-target="#carouselSneakers" data-mdb-slide-to="0" class="active"
@@ -185,18 +168,21 @@
   </div>
 
    <!--description-->
-   
    <div id="description" class = "item">
        <p id="snk">SNEAKER COMPANY</p>
        <h3 class="item-title">Fall Limited Edition Sneakers</h3>
        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
           durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
        <!--prize-->
-       <div id="prize">
-         <h3 id="prize1" class = "item-price1">$125.00</h3>
-         <p id="percent">50%</p>
-         <p id="prize2" class = "item-price2"></p>
-       </div>
+       <div id="prizes">
+         <div id="prize">
+          <h3 id="prize1" class = "item-price1">$125.00</h3>
+          <p id="percent">50%</p>
+         </div>
+           <div id="total">
+             <p id="prize2" class = "item-price2"></p>
+           </div>
+       </div>    
        <!--cart-->
        <div class="cart">
          <div class="cart-1">

@@ -12,6 +12,7 @@
     align-items: center;
     
    }
+  
 
   /* #navLogo{
     align-items: baseline;
@@ -69,17 +70,19 @@ text-decoration: none;
     display: flex;
     margin: 20px;
     margin-top: -10px;
-    background-color: white;
-    border:none;
+    border: none;
+    background: none;
     cursor:pointer;
     
    }
+   
    .carousel-indicators{
     display:flex;
     justify-content: space-around;
     width:500px;
     
    }
+
    #controls{
     display: none;
    }
@@ -142,33 +145,40 @@ p{
 
 #prize{
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
     font-size: 25px;
+    align-content: flex-start;
+    height: fit-content;
+    padding: 0%;
    
+}
+
+#prizes{
+  display: flex;
+  flex-direction: column;
 }
 #prize1{
     font-size:25px;
-
-    
 }
 
-#prize2{
-   text-align: left; 
-
-  
+#total{
+  text-align: left;
+  margin-left: -50px;
+  margin-top: -20px;
 }
  .cart {
     display: flex;
+    text-align: left;
     flex-direction: row;
+    width: 400px;
 
  }
- #addCart{
-    width:40%;
+ .cart-1{
+    width:30%;
     margin-right: 20px;
  }
-#addCart2{
-    width: 80%;
+#addToCart{
+    width:250px;
 }
 
 .attribution{
