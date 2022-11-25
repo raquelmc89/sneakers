@@ -16,14 +16,39 @@ const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
 const navList = document.getElementsByTagName('a')
 
+// MENU
 
-if(window.innerWidth>1000){
-    const list=navList.length
-    text=""
-    for (let i = 0; i < list; i++){
-        text += list[i];
-    }
-}
+const menu = document.createElement('div');
+const modalMenu = `
+   <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="nav-menu">
+                    <div class="modal-body">
+                    <button type="button" class="btn" data-mdb-dismiss="modal"><image id="closeImg" src="./images/icon-close.svg"></image></button>
+                    <ul class="nav-list">
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Collections</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Men</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Women</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">About</a>
+                      <li class="nav-item">
+                       <a class="nav-link" href="#">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+               </div>
+             </div>
+            </div>
+    `
+menu.innerHTML = modalMenu;
+const menu2 = document.querySelector('#navMenu');
+menu2.append(menu);
+
 
 // THUMNNAILS 
 $(document).ready(function(){

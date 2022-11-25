@@ -34,7 +34,9 @@
 
 /* MENU  */
 
-
+#menu{
+    display: none;
+}
 
 .modal-content{
     width:400px;
