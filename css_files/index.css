@@ -128,12 +128,10 @@ body{
     background-color:  white;
     border-radius: 50px;
     padding:8px;
-    z-index: 3;
-    position: absolute;
+    position: relative;
   
 }
 .carousel-inner{
-    z-index: 1;
     position:inherit;
 }
 .carousel-indicators{

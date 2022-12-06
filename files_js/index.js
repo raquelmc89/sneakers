@@ -50,7 +50,8 @@ const menu2 = document.querySelector('#navMenu');
 menu2.append(menu);
 
 
-// THUMNNAILS 
+// THUMNNAILS  
+
 $(document).ready(function(){
 
 
@@ -77,7 +78,43 @@ $(document).ready(function(){
            
 
              })
-     })
+     });
+
+   $("#cartIcon").click(function(){
+      var modalCart = document.getElementById('cart-modal');
+      var cartEmpty = document.getElementById('cartEmpty');
+      var showCartEmpty = cartEmpty;
+      const showCartFull = cartFull;
+       modalCart.style.display = 'block';
+       modalCart.append(showCartEmpty);
+       modalCart.append(showCartFull);
+       cartIconNumber.innerText == 0 ? cartEmpty.style.display = "block": cartFull.style.display = "block"
+
+
+   
+
+       // CART FULL
+     
+       cartIconNumber.innerText== 0 ? modalCart.append(showCartEmpty): null;
+       cartIconNumber.innerText > 0 ? modalCart.append(showCartFull): 
+       /*cartIconNumber.innerText > 0? modalCart.append(showCartFull): */
+       quantityFromStorage = localStorage.getItem('quantity');
+       prizeFromStorage = localStorage.getItem('prize');
+      
+       totalPrize.innerText = prizeFromStorage;
+       squantity.innerText= "X" + quantityFromStorage;
+       sprize.innerText ="$" + sneakers.prize + ".00";
+
+       
+   
+   })
+
+   $("#closeCart").click(function(){
+    cartEmpty.style.display="none";
+    document.getElementById('cart-modal').style.display="none";
+   })
+   
+
     
 });  
 
@@ -140,6 +177,8 @@ function plusButtonClicked(event){
 
 }
 
+// add to cart button 
+
 addToCart.addEventListener('click', addToCartClicked);
 
 function addToCartClicked(event){
@@ -150,13 +189,12 @@ function addToCartClicked(event){
    
 }
 
-
-    
+// view cart 
+ /*   
 cartIcon.addEventListener("click", cartIconClicked)
 
 function cartIconClicked(event){
     const buttonClicked = event.target;
-
     cartIconNumber.innerText == 0 ?
     cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
         quantityFromStorage = localStorage.getItem('quantity');
@@ -180,8 +218,26 @@ function cartIconClicked(event){
       
       }
     
-}
 
+
+
+
+      newElement()
+      function newElement(){
+        const carousel = document.getElementById('fullCarousel')
+        const newEl = document.createElement('div');
+        const picture = `
+         <div>
+          <img src=image-product-1.jpg/>
+        `
+        newEl.innerHTML = picture;
+        const mainContainer =  document.getElementById('mainContainer')
+        mainContainer.append(picture)
+        mainContainer.remove(carousel)
+      }
+
+    
+}*/
 
 
 
