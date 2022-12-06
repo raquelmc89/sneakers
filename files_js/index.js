@@ -50,75 +50,6 @@ const menu2 = document.querySelector('#navMenu');
 menu2.append(menu);
 
 
-// THUMNNAILS  
-
-$(document).ready(function(){
-
-
-    $(".img-fluid").click(function(){
-       var modal = document.getElementById('myModal')
-       var carousel = document.getElementById('fullCarousel');
-       var modalImg = carousel;
-       modal.style.display = "block";
-       modal.append(modalImg);
-       const carouselControls = document.getElementById("controls");
-       carouselControls.style.display="block";
-
-      
-            $("#closeCarousel").click(function(){
-                modal.style.display = "none";
-                myCarousel.append(carousel);
-                carouselControls.style.display="none"
-
-             });
-
-             $(window).resize(function(){
-              modal.style.display = "none";
-              myCarousel.append(carousel)
-           
-
-             })
-     });
-
-   $("#cartIcon").click(function(){
-      var modalCart = document.getElementById('cart-modal');
-      var cartEmpty = document.getElementById('cartEmpty');
-      var showCartEmpty = cartEmpty;
-      const showCartFull = cartFull;
-       modalCart.style.display = 'block';
-       modalCart.append(showCartEmpty);
-       modalCart.append(showCartFull);
-       cartIconNumber.innerText == 0 ? cartEmpty.style.display = "block": cartFull.style.display = "block"
-
-
-   
-
-       // CART FULL
-     
-       cartIconNumber.innerText== 0 ? modalCart.append(showCartEmpty): null;
-       cartIconNumber.innerText > 0 ? modalCart.append(showCartFull): 
-       /*cartIconNumber.innerText > 0? modalCart.append(showCartFull): */
-       quantityFromStorage = localStorage.getItem('quantity');
-       prizeFromStorage = localStorage.getItem('prize');
-      
-       totalPrize.innerText = prizeFromStorage;
-       squantity.innerText= "X" + quantityFromStorage;
-       sprize.innerText ="$" + sneakers.prize + ".00";
-
-       
-   
-   })
-
-   $("#closeCart").click(function(){
-    cartEmpty.style.display="none";
-    document.getElementById('cart-modal').style.display="none";
-   })
-   
-
-    
-});  
-
-
 
 //PRIZE
 
@@ -218,27 +149,89 @@ function cartIconClicked(event){
       
       }
     
+*/
 
 
+// THUMNNAILS  
+
+$(document).ready(function(){
 
 
-      newElement()
-      function newElement(){
-        const carousel = document.getElementById('fullCarousel')
-        const newEl = document.createElement('div');
-        const picture = `
-         <div>
-          <img src=image-product-1.jpg/>
-        `
-        newEl.innerHTML = picture;
-        const mainContainer =  document.getElementById('mainContainer')
-        mainContainer.append(picture)
-        mainContainer.remove(carousel)
-      }
-
-    
-}*/
-
-
+    $(".img-fluid").click(function(){
+       var modal = document.getElementById('myModal')
+       var carousel = document.getElementById('fullCarousel');
+       var modalImg = carousel;
+       modal.style.display = "block";
+       modal.append(modalImg);
+       const carouselControls = document.getElementById("controls");
+       carouselControls.style.display="block";
 
       
+            $("#closeCarousel").click(function(){
+                modal.style.display = "none";
+                myCarousel.append(carousel);
+                carouselControls.style.display="none"
+
+             });
+
+             $(window).resize(function(){
+              modal.style.display = "none";
+              myCarousel.append(carousel)
+           
+
+             })
+     });
+
+     //CART ICON CLICKED
+
+   $("#cartIcon").click(function(){
+      var modalCart = document.getElementById('cart-modal');
+      var cartEmpty = document.getElementById('cartEmpty');
+      var showCartEmpty = cartEmpty;
+      const showCartFull = cartFull;
+       modalCart.style.display = 'block';
+       modalCart.append(showCartEmpty);
+
+       cartIconNumber.innerText== 0 ? modalCart.append(showCartEmpty): null;
+       cartIconNumber.innerText > 0 ? modalCart.append(showCartFull): 
+       modalCart.append(showCartFull);
+       cartIconNumber.innerText == 0 ? cartEmpty.style.display = "block": cartFull.style.display = "block"
+
+       quantityFromStorage = localStorage.getItem('quantity');
+       prizeFromStorage = localStorage.getItem('prize');
+      
+       totalPrize.innerText = prizeFromStorage;
+       squantity.innerText= "X" + quantityFromStorage;
+       sprize.innerText ="$" + sneakers.prize + ".00";
+
+       // CART EMPTY OR FULL 
+     
+      
+       //CLOSE CART FULL
+
+       $('.delete').click(function(){
+       
+        cartFull.style.display = "none";
+        document.getElementById('cart-modal').style.display="none";
+        cartIconNumber.style.display="none";
+        cartIconNumber.innerText > 0 ? 
+        modalCart.append(showCartFull): null;
+        cartIconNumber.innerHTML = 0;
+        cartIconNumber.style.display="none";
+
+         });
+   
+    })
+
+   
+
+   //CLOSE CART EMPTY
+
+   $("#closeCart").click(function(){
+    cartEmpty.style.display="none";
+    document.getElementById('cart-modal').style.display="none";
+   })
+   
+
+    
+});  

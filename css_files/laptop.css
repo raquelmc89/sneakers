@@ -185,4 +185,15 @@ p{
    justify-content: center;
 
 }
+
+.cartContent{
+  justify-content: space-evenly;
+  
+}
+.cart-item{
+
+  width: 100px;
+  height: 20px;
+
+}
 }
