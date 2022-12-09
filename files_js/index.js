@@ -104,6 +104,8 @@ function plusButtonClicked(event){
     window.localStorage.setItem('quantity',quantityInput.value);
     const prizeUp = ((sneakers.prize)*(quantityInput.value));
     window.localStorage.setItem('prize',prizeUp)
+
+    cartEmpty.style.display = "none";
   
     minusButtonClicked
 
@@ -118,6 +120,11 @@ function addToCartClicked(event){
    cartIconNumber.innerText = quantityInput.value;  
    const itemAmount =  Number(cartIconNumber.innerText);
    itemAmount > 0 ? cartIconNumber.style.display="inline": null;
+
+   // stop showing cart if close button hasn't been clicked 
+
+   cartEmpty.style.display = "none";
+   document.getElementById("cart-modal").style.display = "none";
    
 }
 
@@ -153,10 +160,11 @@ function cartIconClicked(event){
 */
 
 
-// THUMNNAILS  
+
 
 $(document).ready(function(){
 
+// THUMNNAILS  
 
     $(".img-fluid").click(function(){
        var modal = document.getElementById('myModal')
@@ -200,10 +208,8 @@ $(document).ready(function(){
        squantity.innerText= "X" + " " + quantityFromStorage;
        totalPrize.innerText = "$" + Math.floor(prizeFromStorage*100)/100;
  
-       // CART EMPTY OR FULL 
-     
-      
-       //CLOSE CART 
+    
+       //CLOSE FULL CART 
 
        $('.delete').click(function(){
           $(".cartFull").css("display", "none");
@@ -212,7 +218,8 @@ $(document).ready(function(){
         cartIconNumber.style.display="none";
         
          });
-   // close cart empty
+
+         // CLOSE EMPTY CART
 
          $("#closeCart").click(function(){
           cartEmpty.style.display="none";
