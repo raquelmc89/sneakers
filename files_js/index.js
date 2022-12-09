@@ -6,15 +6,15 @@ const minusButton = document.getElementById('minusButton');
 const plusButton = document.getElementById("plusButton");
 const quantityInput = document.querySelector('.cart-input');
 const addToCart = document.querySelector('#addToCart');
-const cartIcon = document.getElementById('cartIcon');
-const cartEmpty = document.querySelector('.cart-Empty');
+const cartIcon = document.getElementById('cartIcon');;
 const cartFull = document.querySelector('.cartFull');
 const cartIconNumber = document.getElementById("cartIconNumber");
 const sprize = document.getElementById("sneakers.prize");
 const squantity = document.getElementById("quantityFromStorage");
 const totalPrize = document.getElementById("prizeFromStorage");
 const buttonDelete = document.querySelector('.delete');
-const navList = document.getElementsByTagName('a')
+const navList = document.getElementsByTagName('a');
+const cartEmpty = document.getElementById('cartEmpty');
 
 // MENU
 
@@ -90,6 +90,7 @@ function minusButtonClicked(event){
     const  prizeDown = ((sneakers.prize)*(quantityInput.value));
     quantityInput.value < 0 ? (quantityInput.value = ++sneakers.amount) : null
     window.localStorage.setItem('prize',prizeDown);
+
     
 };
 
@@ -184,54 +185,44 @@ $(document).ready(function(){
 
      //CART ICON CLICKED
 
-   $("#cartIcon").click(function(){
-      var modalCart = document.getElementById('cart-modal');
-      var cartEmpty = document.getElementById('cartEmpty');
-      var showCartEmpty = cartEmpty;
-      const showCartFull = cartFull;
-       modalCart.style.display = 'block';
-       modalCart.append(showCartEmpty);
-
-       cartIconNumber.innerText== 0 ? modalCart.append(showCartEmpty): null;
-       cartIconNumber.innerText > 0 ? modalCart.append(showCartFull): 
-       modalCart.append(showCartFull);
-       cartIconNumber.innerText == 0 ? cartEmpty.style.display = "block": cartFull.style.display = "block"
+    $("#cartIcon").click(function(){
+      
+      $("#cart-modal").css("display", "block");
+      $("#cart-modal").append($("#cartEmpty")) 
+      $("#cart-modal").append($(".cartFull"));
+      cartIconNumber.innerText == 0 ? $("#cartEmpty").css("display", "block"):null;
+      cartIconNumber.innerText > 0 ? $(".cartFull").css("display", "block"): null;
 
        quantityFromStorage = localStorage.getItem('quantity');
        prizeFromStorage = localStorage.getItem('prize');
-      
-       totalPrize.innerText = prizeFromStorage;
-       squantity.innerText= "X" + quantityFromStorage;
-       sprize.innerText ="$" + sneakers.prize + ".00";
 
+       sprize.innerText = "$" + sneakers.prize.toFixed(2);
+       squantity.innerText= "X" + " " + quantityFromStorage;
+       totalPrize.innerText = "$" + Math.floor(prizeFromStorage*100)/100;
+ 
        // CART EMPTY OR FULL 
      
       
-       //CLOSE CART FULL
+       //CLOSE CART 
 
        $('.delete').click(function(){
-       
-        cartFull.style.display = "none";
-        document.getElementById('cart-modal').style.display="none";
-        cartIconNumber.style.display="none";
-        cartIconNumber.innerText > 0 ? 
-        modalCart.append(showCartFull): null;
+          $(".cartFull").css("display", "none");
+          $("#cartEmpty").css("display", "block");
         cartIconNumber.innerHTML = 0;
         cartIconNumber.style.display="none";
-
+        
          });
-   
+   // close cart empty
+
+         $("#closeCart").click(function(){
+          cartEmpty.style.display="none";
+          document.getElementById('cart-modal').style.display="none";
+    
+      
+         })
+       
     })
 
-   
-
-   //CLOSE CART EMPTY
-
-   $("#closeCart").click(function(){
-    cartEmpty.style.display="none";
-    document.getElementById('cart-modal').style.display="none";
-   })
-   
 
     
 });  

@@ -164,6 +164,10 @@ p{
   margin-left: -50px;
   margin-top: -20px;
 }
+
+
+
+
  .cart {
     display: flex;
     text-align: left;
@@ -179,21 +183,40 @@ p{
     width:250px;
 }
 
-.attribution{
-    display: flex;
-    align-content: center;
-   justify-content: center;
+/*  CART FULL  */
 
-}
 
 .cartContent{
-  justify-content: space-evenly;
-  
+  width: fit-content;
 }
-.cart-item{
 
-  width: 100px;
-  height: 20px;
 
+.numbers{
+  margin-top: -20px;
+ 
+}
+
+.cart-prize{
+  width:8%;
+
+}
+.cart-amount{
+  width:5%;
+}
+
+.cart-total{
+  width: 5%;
+}
+#imgCart{
+  height:70px ;
+
+}
+.cart-delete{
+  margin-top:20px;
+  width: fit-content;
+}
+#checkOut{
+  margin-top: 20px;
+width: fit-content;
 }
 }
