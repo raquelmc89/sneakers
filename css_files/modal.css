@@ -40,42 +40,10 @@
 
 
 }
-/* Modal Content (image) */
-/*#modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  
-}*/
 
-/* Caption of Modal Image */
-/*#caption-carousel {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}*/
-
-/* Add Animation */
-/*.modal-content-carousel, #caption-carousel {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}*/
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+#closeMenu{
+  display: none;
+  margin-left: 80%;
+  margin-top: -93%;
 }
 

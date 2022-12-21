@@ -25,10 +25,8 @@
      <div id="navLogo">
         <div id="nav">
           <div id="navMenu">
-            <button type="button" class="btn" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-               <image id="navIcon" src="./images/icon-menu.svg"></image></button>
-            </button>
-          <div id="menu">
+            <img id="navIcon" src="./images/icon-menu.svg">
+           <nav id="menu">
             <ul class="navList">
               <li class="nav-item">
                <a class="navLink" href="#">Collections</a>
@@ -42,9 +40,26 @@
                <a class="navLink" href="#">Contact</a>
               </li>
             </ul>
-          </div>
-          </div>
+          </nav>
+           <img id=closeMenu src="./images/icon-close.svg"/>
         </div>
+        </div>
+        <!--menu for laptop without modal -->
+        <nav id="menuLaptop">
+          <ul class="navList">
+            <li class="nav-item">
+             <a class="navLink" href="#">Collections</a>
+            <li class="nav-item">
+             <a class="navLink" href="#">Men</a>
+            <li class="nav-item">
+             <a class="navLink" href="#">Women</a>
+            <li class="nav-item">
+             <a class="navLink" href="#">About</a>
+            <li class="nav-item">
+             <a class="navLink" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
        <div id="logo">
          <img id="logoImg" src="./images/logo.svg"/>
        </div>
@@ -192,10 +207,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
+<!--footer-->
+
 <footer>
-  <div class="attribution">
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p>
-    <p>Coded by <a href="#">Raquel Martin Calderon</a></p>
+  <div class="footer">
+    <p>Challenge by <a class="foot" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a></p>
+    <p>Coded by <a class= "foot" href="#">Raquel Martin Calderon</a></p>
   </div>
 </footer>
 </html>

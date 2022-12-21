@@ -16,40 +16,6 @@ const buttonDelete = document.querySelector('.delete');
 const navList = document.getElementsByTagName('a');
 const cartEmpty = document.getElementById('cartEmpty');
 
-// MENU
-
-const menu = document.createElement('div');
-const modalMenu = `
-   <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="nav-menu">
-                    <div class="modal-body">
-                    <button type="button" class="btn" data-mdb-dismiss="modal"><image id="closeImg" src="./images/icon-close.svg"></image></button>
-                    <ul class="nav-list">
-                      <li class="nav-item">
-                       <a class="nav-link" href="#">Collections</a>
-                      <li class="nav-item">
-                       <a class="nav-link" href="#">Men</a>
-                      <li class="nav-item">
-                       <a class="nav-link" href="#">Women</a>
-                      <li class="nav-item">
-                       <a class="nav-link" href="#">About</a>
-                      <li class="nav-item">
-                       <a class="nav-link" href="#">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-               </div>
-             </div>
-            </div>
-    `
-menu.innerHTML = modalMenu;
-const menu2 = document.querySelector('#navMenu');
-menu2.append(menu);
-
-
 
 //PRIZE
 
@@ -182,22 +148,96 @@ $(document).ready(function(){
                 carouselControls.style.display="none"
 
              });
-
+              
              $(window).resize(function(){
               modal.style.display = "none";
               myCarousel.append(carousel)
-           
+              
 
              })
      });
 
+     //MODAL MENU 
+     /*
+     $("#navIcon").click(function(){
+      const modalMenu = `
+       <ul class="navList">
+         <li class="nav-item">
+          <a class="navLink" href="#">Collections</a>
+         <li class="nav-item">
+          <a class="navLink" href="#">Men</a>
+         <li class="nav-item">
+          <a class="navLink" href="#">Women</a>
+         <li class="nav-item">
+          <a class="navLink" href="#">About</a>
+         <li class="nav-item">
+          <a class="navLink" href="#">Contact</a>
+         </li>
+       </ul>
+     </div>
+     </div>`
+     $("#menuModal").css("display", "block")
+                    .append($(modalMenu))
+                    .append($("#closeMenu").css("display", "block"));
+     $(".controls").css("display", "none");
+     $("#closeMenu").click(function(){
+   
+      $("#menuModal").css("display", "none")
+                     .remove(modalMenu)
+            
+
+      $(".controls").css("display", "block");
+      $
+     
+        $(window).resize(function(){
+          $("#menuModal").css("display", "none");
+         })
+     })
+   
+     
+   });
+
+      $("#navIcon").click(function(){
+        $("#menuModal").css("display", "block")
+                       .append($(".navList").css("display", "block"))
+                       .append($("#closeMenu").css("display", "block"));
+        $(".controls").css("display", "none")
+        $("#closeMenu").click(function(){
+           $("#menuModal").css("display", "none");
+           $(".controls").css("display", "block");
+
+
+       })
+     
+    
+     })
+
+*/
+
+$("#navIcon").click(function(){
+  $("#menu").css("display","block")
+            .append($("#closeMenu").css("display", "block"));
+  $(".controls").css("display", "none");
+    
+        $("#closeMenu").click(function(){
+          
+          $("#menu").css( "display", "none");
+          $(".controls").css("display", "block");
+         
+      });
+   
+       
+})
+
+
+  
      //CART ICON CLICKED
 
     $("#cartIcon").click(function(){
       
-      $("#cart-modal").css("display", "block");
-      $("#cart-modal").append($("#cartEmpty")) 
-      $("#cart-modal").append($(".cartFull"));
+      $("#cart-modal").css("display", "block")
+                      .append($("#cartEmpty")) 
+                      .append($(".cartFull"));
       cartIconNumber.innerText == 0 ? $("#cartEmpty").css("display", "block"):null;
       cartIconNumber.innerText > 0 ? $(".cartFull").css("display", "block"): null;
 
