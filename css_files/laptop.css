@@ -9,7 +9,8 @@
     border-bottom: 1px solid hsl(0, 0%, 75%);
     margin-left: 8%;
     margin-right: -10%;
-   align-items: baseline;
+    align-items: baseline;
+    width: fit-content;
     
    }
   
@@ -48,7 +49,7 @@ text-decoration: none;
 
    #cart{
  
-    padding-left: 200px
+    padding-left: 100px
     
    }
 
