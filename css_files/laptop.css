@@ -188,6 +188,22 @@ p{
 #addToCart{
     width:250px;
 }
+/*  CART EMPTY  */
+#cartEmpty{
+  align-items: center;
+  margin-top: -100px;
+ 
+}
+
+
+#closeCart{
+  display: flex;
+  margin-top:-35px;
+  width:fit-content;
+  margin-left: 40%;
+ 
+}
+
 
 /*  CART FULL  */
 

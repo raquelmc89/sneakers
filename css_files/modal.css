@@ -23,17 +23,6 @@
 }
 
 
-#closeModal{
-  display: flex;
-  justify-content: flex-end;
-  width: 950px;
-  height: 100px;
-  align-items: flex-end;
-
- 
-  
-}
-
 #closeCarousel{
 
   align-items: flex-end;
@@ -44,6 +33,6 @@
 #closeMenu{
   display: none;
   margin-left: 80%;
-  margin-top: -93%;
+  margin-top: -100%;
 }
 
