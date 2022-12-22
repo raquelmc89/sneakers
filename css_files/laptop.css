@@ -132,6 +132,7 @@ text-decoration: none;
     border-radius: 10%;
 }
 
+
 /* ITEM DESCRIPTION  */
 
 
@@ -209,11 +210,13 @@ p{
 
 .cartContent{
   width:fit-content;
+  margin-left: 30px;
   
 }
 
 
 .numbers{
+ 
   margin-top: -20px;
   width: 600px;
   
@@ -221,16 +224,16 @@ p{
 }
 
 .cart-prize{
-  width:15%;
+  width:5%;
  
 
 }
 .cart-amount{
-  width:15%;
+  width:5%;
 }
 
 .cart-total{
-  width: 15%;
+  width: 5%;
 }
 #imgCart{
   height:60px ;

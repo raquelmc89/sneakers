@@ -23,10 +23,10 @@
 }
 
 
-#closeCarousel{
+#closeModal{
 
-  align-items: flex-end;
-
+  margin-left: 30%;
+  margin-top: 10%;
 
 }
 

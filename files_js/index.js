@@ -94,38 +94,6 @@ function addToCartClicked(event){
    
 }
 
-// view cart 
- /*   
-cartIcon.addEventListener("click", cartIconClicked)
-
-function cartIconClicked(event){
-    const buttonClicked = event.target;
-    cartIconNumber.innerText == 0 ?
-    cartEmpty.classList.toggle("cart-Empty"): cartFull.classList.toggle("cartFull");
-        quantityFromStorage = localStorage.getItem('quantity');
-        prizeFromStorage = localStorage.getItem('prize');
-       
-        totalPrize.innerText = prizeFromStorage;
-        squantity.innerText= "X" + quantityFromStorage;
-        sprize.innerText ="$" + sneakers.prize + ".00";
-
-
-	   cartFull
-    .querySelector('.delete')
-    .addEventListener('click', removeShoppingItem);
-    
-        function removeShoppingItem(event){
-        const buttonDelete = event.target;
-        cartIconNumber.innerText > 0 ? 
-        cartFull.classList.toggle("cartFull") : null;
-        cartIconNumber.innerHTML = 0;
-        cartIconNumber.style.display="none";
-      
-      }
-    
-*/
-
-
 
 
 $(document).ready(function(){
@@ -151,72 +119,18 @@ $(document).ready(function(){
               
              $(window).resize(function(){
               modal.style.display = "none";
-              myCarousel.append(carousel)
+              myCarousel.append(carousel);
+              
               
 
              })
      });
 
-     //MODAL MENU 
-     /*
-     $("#navIcon").click(function(){
-      const modalMenu = `
-       <ul class="navList">
-         <li class="nav-item">
-          <a class="navLink" href="#">Collections</a>
-         <li class="nav-item">
-          <a class="navLink" href="#">Men</a>
-         <li class="nav-item">
-          <a class="navLink" href="#">Women</a>
-         <li class="nav-item">
-          <a class="navLink" href="#">About</a>
-         <li class="nav-item">
-          <a class="navLink" href="#">Contact</a>
-         </li>
-       </ul>
-     </div>
-     </div>`
-     $("#menuModal").css("display", "block")
-                    .append($(modalMenu))
-                    .append($("#closeMenu").css("display", "block"));
-     $(".controls").css("display", "none");
-     $("#closeMenu").click(function(){
-   
-      $("#menuModal").css("display", "none")
-                     .remove(modalMenu)
-            
-
-      $(".controls").css("display", "block");
-      $
-     
-        $(window).resize(function(){
-          $("#menuModal").css("display", "none");
-         })
-     })
-   
-     
-   });
-
-      $("#navIcon").click(function(){
-        $("#menuModal").css("display", "block")
-                       .append($(".navList").css("display", "block"))
-                       .append($("#closeMenu").css("display", "block"));
-        $(".controls").css("display", "none")
-        $("#closeMenu").click(function(){
-           $("#menuModal").css("display", "none");
-           $(".controls").css("display", "block");
-
-
-       })
-     
-    
-     })
-
-*/
+    // MENU 
 
 $("#navIcon").click(function(){
   $("#menu").css("display","block")
-   $("#closeMenu").css("display", "block") ;        /*.append($("#closeMenu").css("display", "block"));*/
+   $("#closeMenu").css("display", "block") ;       
   $(".controls").css("display", "none");
     
         $("#closeMenu").click(function(){
