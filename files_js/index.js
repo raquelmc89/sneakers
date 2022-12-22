@@ -216,7 +216,7 @@ $(document).ready(function(){
 
 $("#navIcon").click(function(){
   $("#menu").css("display","block")
-            .append($("#closeMenu").css("display", "block"));
+   $("#closeMenu").css("display", "block") ;        /*.append($("#closeMenu").css("display", "block"));*/
   $(".controls").css("display", "none");
     
         $("#closeMenu").click(function(){
@@ -229,7 +229,9 @@ $("#navIcon").click(function(){
        
 })
 
-
+$(window).resize(function(){
+  $("#menu").css("display", "none");
+ })
   
      //CART ICON CLICKED
 
